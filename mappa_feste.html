@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_684a34b906ed53890fb3b46256e95b81 {
+                #map_9ae7caf9dc18a98ffdc50866d586b3c5 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_684a34b906ed53890fb3b46256e95b81" ></div>
+            <div class="folium-map" id="map_9ae7caf9dc18a98ffdc50866d586b3c5" ></div>
         
 </body>
 <script>
     
     
-            var map_684a34b906ed53890fb3b46256e95b81 = L.map(
-                "map_684a34b906ed53890fb3b46256e95b81",
+            var map_9ae7caf9dc18a98ffdc50866d586b3c5 = L.map(
+                "map_9ae7caf9dc18a98ffdc50866d586b3c5",
                 {
                     center: [45.6669, 12.242],
                     crs: L.CRS.EPSG3857,
@@ -63,7 +63,7 @@
 
         
     
-            var tile_layer_f3012b60ab0a071e8f15270fe48cc95d = L.tileLayer(
+            var tile_layer_b637740da280cff989730e11a49d6009 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -80,54 +80,54 @@
             );
         
     
-            tile_layer_f3012b60ab0a071e8f15270fe48cc95d.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            tile_layer_b637740da280cff989730e11a49d6009.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_26152a49eff11c77f292a92db16a00a7 = L.featureGroup(
+            var feature_group_195d39669fc2e48422b917f85b0a51cf = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_0bff9e418e69e85322289a2c7766d12b = L.marker(
-                [45.70111, 12.36806],
+            var marker_dab93a2711a6c3be4ef08b005d8dee08 = L.marker(
+                [45.678133561178804, 12.401392678558162],
                 {
 }
-            ).addTo(feature_group_26152a49eff11c77f292a92db16a00a7);
+            ).addTo(feature_group_195d39669fc2e48422b917f85b0a51cf);
         
     
-            var icon_f7acb21f5101ddec1e357cc883aabce3 = L.AwesomeMarkers.icon(
+            var icon_2bafd94777c07051601f6374a88bfbff = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "red",
+  "markerColor": "orange",
   "iconColor": "white",
   "icon": "info-sign",
   "prefix": "glyphicon",
   "extraClasses": "fa-rotate-0",
 }
             );
-            marker_0bff9e418e69e85322289a2c7766d12b.setIcon(icon_f7acb21f5101ddec1e357cc883aabce3);
+            marker_dab93a2711a6c3be4ef08b005d8dee08.setIcon(icon_2bafd94777c07051601f6374a88bfbff);
         
     
-        var popup_3aef975c8da2c36d60ef79d817d69439 = L.popup({
+        var popup_64b5f58919ad6a6e6b754275cf53832a = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_31aad750333d4a03653f4162c75311e1 = $(`<div id="html_31aad750333d4a03653f4162c75311e1" style="width: 100.0%; height: 100.0%;"><b>Festa Villani (Cavriè)</b></div>`)[0];
-                popup_3aef975c8da2c36d60ef79d817d69439.setContent(html_31aad750333d4a03653f4162c75311e1);
+                var html_3237a5a65d0bafb2234907d6fe97b429 = $(`<div id="html_3237a5a65d0bafb2234907d6fe97b429" style="width: 100.0%; height: 100.0%;"><b>Festa Villani (Rovarè)</b></div>`)[0];
+                popup_64b5f58919ad6a6e6b754275cf53832a.setContent(html_3237a5a65d0bafb2234907d6fe97b429);
             
         
 
-        marker_0bff9e418e69e85322289a2c7766d12b.bindPopup(popup_3aef975c8da2c36d60ef79d817d69439)
+        marker_dab93a2711a6c3be4ef08b005d8dee08.bindPopup(popup_64b5f58919ad6a6e6b754275cf53832a)
         ;
 
         
     
     
-            marker_0bff9e418e69e85322289a2c7766d12b.bindTooltip(
+            marker_dab93a2711a6c3be4ef08b005d8dee08.bindTooltip(
                 `<div>
-                     Festa Villani (Cavriè)
+                     Festa Villani (Rovarè)
                  </div>`,
                 {
   "sticky": true,
@@ -135,68 +135,68 @@
             );
         
     
-            feature_group_26152a49eff11c77f292a92db16a00a7.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_195d39669fc2e48422b917f85b0a51cf.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_b0165032b73626320508032390c744c7 = L.featureGroup(
+            var feature_group_5fa401ed394945267f30c4f6ef040143 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_9e255240152a2529d5bf4cd46ced11c8 = L.circle(
-                [45.70111, 12.36806],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_b0165032b73626320508032390c744c7);
+            var circle_f3ec0b2bf7dcf589e7d7fd84825caa60 = L.circle(
+                [45.678133561178804, 12.401392678558162],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5fa401ed394945267f30c4f6ef040143);
         
     
-            feature_group_b0165032b73626320508032390c744c7.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_5fa401ed394945267f30c4f6ef040143.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_d327c26c443c9fdb543a261a24cc7e43 = L.featureGroup(
+            var feature_group_85adf0834c80a16b8fe8c49da87fefd8 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_cddedf73fdb4dd34e75f04f403a55f68 = L.circle(
-                [45.70111, 12.36806],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_d327c26c443c9fdb543a261a24cc7e43);
+            var circle_a7216a4aa22057820a5a274176e11525 = L.circle(
+                [45.678133561178804, 12.401392678558162],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_85adf0834c80a16b8fe8c49da87fefd8);
         
     
-            feature_group_d327c26c443c9fdb543a261a24cc7e43.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_85adf0834c80a16b8fe8c49da87fefd8.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_6858968cc232ceb45dabae095fbce53c = L.featureGroup(
+            var feature_group_33268ddc98686a3df164252c89bdf873 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_dea264e2cdb6b569d67928074cd7fdf8 = L.circle(
-                [45.70111, 12.36806],
-                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6858968cc232ceb45dabae095fbce53c);
+            var circle_784c745e6d3b9f4541fb0ca521fb871d = L.circle(
+                [45.678133561178804, 12.401392678558162],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_33268ddc98686a3df164252c89bdf873);
         
     
-            feature_group_6858968cc232ceb45dabae095fbce53c.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_33268ddc98686a3df164252c89bdf873.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_96acf2219e159d64fc39e284c6761b8b = L.featureGroup(
+            var feature_group_57543baaef33d543c41cf1f194df46b7 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_6147fd782ff00beafe4550670800013d = L.marker(
+            var marker_8a2a386903f8368ef310c0eb72a0f134 = L.marker(
                 [45.65617075144528, 12.094269383482416],
                 {
 }
-            ).addTo(feature_group_96acf2219e159d64fc39e284c6761b8b);
+            ).addTo(feature_group_57543baaef33d543c41cf1f194df46b7);
         
     
-            var icon_0940a5d56c4b21bd319b39f26ca78a85 = L.AwesomeMarkers.icon(
+            var icon_b823bc303c4d0b59fba9d93dd1bd3e76 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -205,27 +205,27 @@
   "extraClasses": "fa-rotate-0",
 }
             );
-            marker_6147fd782ff00beafe4550670800013d.setIcon(icon_0940a5d56c4b21bd319b39f26ca78a85);
+            marker_8a2a386903f8368ef310c0eb72a0f134.setIcon(icon_b823bc303c4d0b59fba9d93dd1bd3e76);
         
     
-        var popup_fb60059459dbf9ac23dd608b1222736d = L.popup({
+        var popup_72844ff3a9a2556ce647904dc1f90656 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_5c56fde8f44db57b7eafc4cce7d29802 = $(`<div id="html_5c56fde8f44db57b7eafc4cce7d29802" style="width: 100.0%; height: 100.0%;"><b>Festa Martini (Istrana)</b></div>`)[0];
-                popup_fb60059459dbf9ac23dd608b1222736d.setContent(html_5c56fde8f44db57b7eafc4cce7d29802);
+                var html_653c1f0e3ca50af1abe25fd08b760626 = $(`<div id="html_653c1f0e3ca50af1abe25fd08b760626" style="width: 100.0%; height: 100.0%;"><b>Festa Martini (Istrana)</b></div>`)[0];
+                popup_72844ff3a9a2556ce647904dc1f90656.setContent(html_653c1f0e3ca50af1abe25fd08b760626);
             
         
 
-        marker_6147fd782ff00beafe4550670800013d.bindPopup(popup_fb60059459dbf9ac23dd608b1222736d)
+        marker_8a2a386903f8368ef310c0eb72a0f134.bindPopup(popup_72844ff3a9a2556ce647904dc1f90656)
         ;
 
         
     
     
-            marker_6147fd782ff00beafe4550670800013d.bindTooltip(
+            marker_8a2a386903f8368ef310c0eb72a0f134.bindTooltip(
                 `<div>
                      Festa Martini (Istrana)
                  </div>`,
@@ -235,97 +235,97 @@
             );
         
     
-            feature_group_96acf2219e159d64fc39e284c6761b8b.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_57543baaef33d543c41cf1f194df46b7.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_857c316ef525af2bf6c4e02b4a1e4f50 = L.featureGroup(
+            var feature_group_4be43e9bbb1b77573252fcce7bd2fc4b = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_d19398bd50dd98c50081889b627a6bd2 = L.circle(
+            var circle_d2aac3c65dfd5994f9716b9f627aac5b = L.circle(
                 [45.65617075144528, 12.094269383482416],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_857c316ef525af2bf6c4e02b4a1e4f50);
+            ).addTo(feature_group_4be43e9bbb1b77573252fcce7bd2fc4b);
         
     
-            feature_group_857c316ef525af2bf6c4e02b4a1e4f50.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_4be43e9bbb1b77573252fcce7bd2fc4b.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_a12d7704db1804d15e1eeb6b5cabb236 = L.featureGroup(
+            var feature_group_11ec0eca4ba8b7d4353d825b7c09a1f4 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_2dab5842597a635570a68ea16c017dd5 = L.circle(
+            var circle_b01e1a0bdaaf01b536461b00c9a405a8 = L.circle(
                 [45.65617075144528, 12.094269383482416],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_a12d7704db1804d15e1eeb6b5cabb236);
+            ).addTo(feature_group_11ec0eca4ba8b7d4353d825b7c09a1f4);
         
     
-            feature_group_a12d7704db1804d15e1eeb6b5cabb236.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_11ec0eca4ba8b7d4353d825b7c09a1f4.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_d1ac8dcd5bc6601327c89a07667d5741 = L.featureGroup(
+            var feature_group_b79a5ddf4d8037729179a57946f867d5 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_d84d9d0b5f6af800fc38b3ce9ab84f7e = L.circle(
+            var circle_fb9c6eef98041acf1323049515dc100e = L.circle(
                 [45.65617075144528, 12.094269383482416],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_d1ac8dcd5bc6601327c89a07667d5741);
+            ).addTo(feature_group_b79a5ddf4d8037729179a57946f867d5);
         
     
-            feature_group_d1ac8dcd5bc6601327c89a07667d5741.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_b79a5ddf4d8037729179a57946f867d5.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_17d8343c8b34c5f78e47059194543b4a = L.featureGroup(
+            var feature_group_b92e81b35dc6a86ff2894f337bfad5ff = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_5c399e5aee3c4fa52ee0d99402a86fd5 = L.marker(
+            var marker_8e52a88fb728febdc51a80559cf06169 = L.marker(
                 [45.68808383977507, 12.362454539306622],
                 {
 }
-            ).addTo(feature_group_17d8343c8b34c5f78e47059194543b4a);
+            ).addTo(feature_group_b92e81b35dc6a86ff2894f337bfad5ff);
         
     
-            var icon_e9ba07cb9fb425556eec6d6ed168c422 = L.AwesomeMarkers.icon(
+            var icon_48a474a252fe74552223e82e6e65fc35 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "purple",
+  "markerColor": "green",
   "iconColor": "white",
   "icon": "info-sign",
   "prefix": "glyphicon",
   "extraClasses": "fa-rotate-0",
 }
             );
-            marker_5c399e5aee3c4fa52ee0d99402a86fd5.setIcon(icon_e9ba07cb9fb425556eec6d6ed168c422);
+            marker_8e52a88fb728febdc51a80559cf06169.setIcon(icon_48a474a252fe74552223e82e6e65fc35);
         
     
-        var popup_c9d8a86b86b53e729dff0f8f600c4b7e = L.popup({
+        var popup_0e211155cfc4fe0239c1266c331bd89d = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_88fee87a9c21767e59405ddbf42848ff = $(`<div id="html_88fee87a9c21767e59405ddbf42848ff" style="width: 100.0%; height: 100.0%;"><b>Festa Morandin</b></div>`)[0];
-                popup_c9d8a86b86b53e729dff0f8f600c4b7e.setContent(html_88fee87a9c21767e59405ddbf42848ff);
+                var html_985c4a16014908f12eebcea4881ab5bd = $(`<div id="html_985c4a16014908f12eebcea4881ab5bd" style="width: 100.0%; height: 100.0%;"><b>Festa Morandin</b></div>`)[0];
+                popup_0e211155cfc4fe0239c1266c331bd89d.setContent(html_985c4a16014908f12eebcea4881ab5bd);
             
         
 
-        marker_5c399e5aee3c4fa52ee0d99402a86fd5.bindPopup(popup_c9d8a86b86b53e729dff0f8f600c4b7e)
+        marker_8e52a88fb728febdc51a80559cf06169.bindPopup(popup_0e211155cfc4fe0239c1266c331bd89d)
         ;
 
         
     
     
-            marker_5c399e5aee3c4fa52ee0d99402a86fd5.bindTooltip(
+            marker_8e52a88fb728febdc51a80559cf06169.bindTooltip(
                 `<div>
                      Festa Morandin
                  </div>`,
@@ -335,97 +335,97 @@
             );
         
     
-            feature_group_17d8343c8b34c5f78e47059194543b4a.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_b92e81b35dc6a86ff2894f337bfad5ff.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_e06d2a2df8bd70c1abd3650f816fb762 = L.featureGroup(
+            var feature_group_9c2b0991f69d40ded2dc50b3e873aab7 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_126d2c4e51cce17d0a7d837c6ed16a94 = L.circle(
+            var circle_a27371b347b5737a0fb0c871b18e96f3 = L.circle(
                 [45.68808383977507, 12.362454539306622],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e06d2a2df8bd70c1abd3650f816fb762);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9c2b0991f69d40ded2dc50b3e873aab7);
         
     
-            feature_group_e06d2a2df8bd70c1abd3650f816fb762.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_9c2b0991f69d40ded2dc50b3e873aab7.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_30384726e7c7df89aad3dbb85ff21295 = L.featureGroup(
+            var feature_group_5970a0e117e7c27edcdaff0f86b51593 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_a41bfaed50bd47efedaad6eea3dee4d7 = L.circle(
+            var circle_f50d825d24f6ab3146c8c174740e5108 = L.circle(
                 [45.68808383977507, 12.362454539306622],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_30384726e7c7df89aad3dbb85ff21295);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5970a0e117e7c27edcdaff0f86b51593);
         
     
-            feature_group_30384726e7c7df89aad3dbb85ff21295.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_5970a0e117e7c27edcdaff0f86b51593.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_3d771829c3d015c3489efdf7c91d235c = L.featureGroup(
+            var feature_group_0f12acab7934d072154229634b60cef1 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_f633f313c53caf4e1832131f6bec8ced = L.circle(
+            var circle_0d945a52685e5c7cc86473b1f9426331 = L.circle(
                 [45.68808383977507, 12.362454539306622],
-                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_3d771829c3d015c3489efdf7c91d235c);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_0f12acab7934d072154229634b60cef1);
         
     
-            feature_group_3d771829c3d015c3489efdf7c91d235c.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_0f12acab7934d072154229634b60cef1.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_993657e73b3130d5418afa805784a23b = L.featureGroup(
+            var feature_group_455cd5c491970b1e273da81fe7bf397b = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_4cc8aad6afef1f6930a0bc6b4f13d5a4 = L.marker(
+            var marker_5a83ce84711f3de81d774aba7705d323 = L.marker(
                 [45.67915872772207, 12.077284342329024],
                 {
 }
-            ).addTo(feature_group_993657e73b3130d5418afa805784a23b);
+            ).addTo(feature_group_455cd5c491970b1e273da81fe7bf397b);
         
     
-            var icon_9824fe10aed053bba0f034456d4078d4 = L.AwesomeMarkers.icon(
+            var icon_d24e18070175fff5797c68acb3f111bb = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "lightblue",
+  "markerColor": "magenta",
   "iconColor": "white",
   "icon": "info-sign",
   "prefix": "glyphicon",
   "extraClasses": "fa-rotate-0",
 }
             );
-            marker_4cc8aad6afef1f6930a0bc6b4f13d5a4.setIcon(icon_9824fe10aed053bba0f034456d4078d4);
+            marker_5a83ce84711f3de81d774aba7705d323.setIcon(icon_d24e18070175fff5797c68acb3f111bb);
         
     
-        var popup_59eda01da77629c2d0cb9cbf410a5bae = L.popup({
+        var popup_1d0789f1df40d982178c10785b1d419d = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_609eea657360b7edf14432d951bff9e5 = $(`<div id="html_609eea657360b7edf14432d951bff9e5" style="width: 100.0%; height: 100.0%;"><b>Perchè no? (Istrana)</b></div>`)[0];
-                popup_59eda01da77629c2d0cb9cbf410a5bae.setContent(html_609eea657360b7edf14432d951bff9e5);
+                var html_ec0dbfdeba34a9b7ef01c111266aa243 = $(`<div id="html_ec0dbfdeba34a9b7ef01c111266aa243" style="width: 100.0%; height: 100.0%;"><b>Perchè no? (Istrana)</b></div>`)[0];
+                popup_1d0789f1df40d982178c10785b1d419d.setContent(html_ec0dbfdeba34a9b7ef01c111266aa243);
             
         
 
-        marker_4cc8aad6afef1f6930a0bc6b4f13d5a4.bindPopup(popup_59eda01da77629c2d0cb9cbf410a5bae)
+        marker_5a83ce84711f3de81d774aba7705d323.bindPopup(popup_1d0789f1df40d982178c10785b1d419d)
         ;
 
         
     
     
-            marker_4cc8aad6afef1f6930a0bc6b4f13d5a4.bindTooltip(
+            marker_5a83ce84711f3de81d774aba7705d323.bindTooltip(
                 `<div>
                      Perchè no? (Istrana)
                  </div>`,
@@ -435,86 +435,86 @@
             );
         
     
-            feature_group_993657e73b3130d5418afa805784a23b.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_455cd5c491970b1e273da81fe7bf397b.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_7c185206dbf592c28464176922239a3d = L.featureGroup(
+            var feature_group_cd18df451b21f8d107d056b2bcd1b0f4 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_ae47b2d3a0b67196a064623b132102e7 = L.circle(
+            var circle_5c9eb22e96d2d8cde661020cdd2de8f4 = L.circle(
                 [45.67915872772207, 12.077284342329024],
-                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_7c185206dbf592c28464176922239a3d);
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_cd18df451b21f8d107d056b2bcd1b0f4);
         
     
-            feature_group_7c185206dbf592c28464176922239a3d.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_cd18df451b21f8d107d056b2bcd1b0f4.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_25bdc763e6af6d743353f32ceb2dd2fc = L.featureGroup(
+            var feature_group_234142127fcb9136a5c34c6b25f2cab7 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_4ae1518ca3e9aa43bcbd533dc0f2e064 = L.circle(
+            var circle_73daa94289ff2776ffdc7f265dca49ef = L.circle(
                 [45.67915872772207, 12.077284342329024],
-                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_25bdc763e6af6d743353f32ceb2dd2fc);
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_234142127fcb9136a5c34c6b25f2cab7);
         
     
-            feature_group_25bdc763e6af6d743353f32ceb2dd2fc.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_234142127fcb9136a5c34c6b25f2cab7.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var feature_group_f467cec6804910493ab3804129fe8026 = L.featureGroup(
+            var feature_group_ef2647cd72a59de3afb9acc6b0a23fa2 = L.featureGroup(
                 {
 }
             );
         
     
-            var circle_0cbbd81e4c385de4ab9f55550001fec2 = L.circle(
+            var circle_a3361f1bf47008b74c97416ab878cf73 = L.circle(
                 [45.67915872772207, 12.077284342329024],
-                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
-            ).addTo(feature_group_f467cec6804910493ab3804129fe8026);
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_ef2647cd72a59de3afb9acc6b0a23fa2);
         
     
-            feature_group_f467cec6804910493ab3804129fe8026.addTo(map_684a34b906ed53890fb3b46256e95b81);
+            feature_group_ef2647cd72a59de3afb9acc6b0a23fa2.addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
         
     
-            var layer_control_d41ba2ea4cb8d3f9aa660ad4ae9e2bdf_layers = {
+            var layer_control_c19c7a5c50301fc50c252ca935474634_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_f3012b60ab0a071e8f15270fe48cc95d,
+                    "openstreetmap" : tile_layer_b637740da280cff989730e11a49d6009,
                 },
                 overlays :  {
-                    "Festa Villani (Cavri\u00e8) - Marker" : feature_group_26152a49eff11c77f292a92db16a00a7,
-                    "Festa Villani (Cavri\u00e8) - Fascia 0-10 km" : feature_group_b0165032b73626320508032390c744c7,
-                    "Festa Villani (Cavri\u00e8) - Fascia 10-17 km" : feature_group_d327c26c443c9fdb543a261a24cc7e43,
-                    "Festa Villani (Cavri\u00e8) - Fascia 17-25 km" : feature_group_6858968cc232ceb45dabae095fbce53c,
-                    "Festa Martini (Istrana) - Marker" : feature_group_96acf2219e159d64fc39e284c6761b8b,
-                    "Festa Martini (Istrana) - Fascia 0-10 km" : feature_group_857c316ef525af2bf6c4e02b4a1e4f50,
-                    "Festa Martini (Istrana) - Fascia 10-17 km" : feature_group_a12d7704db1804d15e1eeb6b5cabb236,
-                    "Festa Martini (Istrana) - Fascia 17-25 km" : feature_group_d1ac8dcd5bc6601327c89a07667d5741,
-                    "Festa Morandin - Marker" : feature_group_17d8343c8b34c5f78e47059194543b4a,
-                    "Festa Morandin - Fascia 0-10 km" : feature_group_e06d2a2df8bd70c1abd3650f816fb762,
-                    "Festa Morandin - Fascia 10-17 km" : feature_group_30384726e7c7df89aad3dbb85ff21295,
-                    "Festa Morandin - Fascia 17-25 km" : feature_group_3d771829c3d015c3489efdf7c91d235c,
-                    "Perch\u00e8 no? (Istrana) - Marker" : feature_group_993657e73b3130d5418afa805784a23b,
-                    "Perch\u00e8 no? (Istrana) - Fascia 0-10 km" : feature_group_7c185206dbf592c28464176922239a3d,
-                    "Perch\u00e8 no? (Istrana) - Fascia 10-17 km" : feature_group_25bdc763e6af6d743353f32ceb2dd2fc,
-                    "Perch\u00e8 no? (Istrana) - Fascia 17-25 km" : feature_group_f467cec6804910493ab3804129fe8026,
+                    "Festa Villani (Rovar\u00e8) - Marker" : feature_group_195d39669fc2e48422b917f85b0a51cf,
+                    "Festa Villani (Rovar\u00e8) - Fascia 0-10 km" : feature_group_5fa401ed394945267f30c4f6ef040143,
+                    "Festa Villani (Rovar\u00e8) - Fascia 10-17 km" : feature_group_85adf0834c80a16b8fe8c49da87fefd8,
+                    "Festa Villani (Rovar\u00e8) - Fascia 17-25 km" : feature_group_33268ddc98686a3df164252c89bdf873,
+                    "Festa Martini (Istrana) - Marker" : feature_group_57543baaef33d543c41cf1f194df46b7,
+                    "Festa Martini (Istrana) - Fascia 0-10 km" : feature_group_4be43e9bbb1b77573252fcce7bd2fc4b,
+                    "Festa Martini (Istrana) - Fascia 10-17 km" : feature_group_11ec0eca4ba8b7d4353d825b7c09a1f4,
+                    "Festa Martini (Istrana) - Fascia 17-25 km" : feature_group_b79a5ddf4d8037729179a57946f867d5,
+                    "Festa Morandin - Marker" : feature_group_b92e81b35dc6a86ff2894f337bfad5ff,
+                    "Festa Morandin - Fascia 0-10 km" : feature_group_9c2b0991f69d40ded2dc50b3e873aab7,
+                    "Festa Morandin - Fascia 10-17 km" : feature_group_5970a0e117e7c27edcdaff0f86b51593,
+                    "Festa Morandin - Fascia 17-25 km" : feature_group_0f12acab7934d072154229634b60cef1,
+                    "Perch\u00e8 no? (Istrana) - Marker" : feature_group_455cd5c491970b1e273da81fe7bf397b,
+                    "Perch\u00e8 no? (Istrana) - Fascia 0-10 km" : feature_group_cd18df451b21f8d107d056b2bcd1b0f4,
+                    "Perch\u00e8 no? (Istrana) - Fascia 10-17 km" : feature_group_234142127fcb9136a5c34c6b25f2cab7,
+                    "Perch\u00e8 no? (Istrana) - Fascia 17-25 km" : feature_group_ef2647cd72a59de3afb9acc6b0a23fa2,
                 },
             };
-            let layer_control_d41ba2ea4cb8d3f9aa660ad4ae9e2bdf = L.control.layers(
-                layer_control_d41ba2ea4cb8d3f9aa660ad4ae9e2bdf_layers.base_layers,
-                layer_control_d41ba2ea4cb8d3f9aa660ad4ae9e2bdf_layers.overlays,
+            let layer_control_c19c7a5c50301fc50c252ca935474634 = L.control.layers(
+                layer_control_c19c7a5c50301fc50c252ca935474634_layers.base_layers,
+                layer_control_c19c7a5c50301fc50c252ca935474634_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_684a34b906ed53890fb3b46256e95b81);
+            ).addTo(map_9ae7caf9dc18a98ffdc50866d586b3c5);
 
         
 </script>

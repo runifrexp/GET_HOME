@@ -6,10 +6,10 @@ mappa = folium.Map(location=[45.6669, 12.242], zoom_start=12)
 
 # Aggiungi i luoghi delle feste
 feste = [
-    {"nome": "Festa Villani (Cavriè)", "coordinate": [45.70111, 12.36806], "colore": "red"},
+    {"nome": "Festa Villani (Rovarè)", "coordinate": [45.678133561178804, 12.401392678558162], "colore": "orange"},
     {"nome": "Festa Martini (Istrana)", "coordinate": [45.65617075144528, 12.094269383482416], "colore": "blue"},
-    {"nome": "Festa Morandin", "coordinate": [45.68808383977507, 12.362454539306622], "colore": "purple"},
-    {"nome": "Perchè no? (Istrana)", "coordinate": [45.67915872772207, 12.077284342329024], "colore": "lightblue"}
+    {"nome": "Festa Morandin", "coordinate": [45.68808383977507, 12.362454539306622], "colore": "green"},
+    {"nome": "Perchè no? (Istrana)", "coordinate": [45.67915872772207, 12.077284342329024], "colore": "magenta"}
 ]
 
 # Aggiungi i marker e le fasce sulla mappa
@@ -61,6 +61,6 @@ for festa in feste:
 LayerControl().add_to(mappa)
 
 # Salva la mappa come file HTML
-mappa.save("mappa_feste_interattiva.html")
+mappa.save("mappa_feste.html")
 
-print("Mappa salvata come 'mappa_feste_interattiva.html'. Aprila con un browser per visualizzarla!")
+print("Mappa salvata come 'mappa_feste.html'. Aprila con un browser per visualizzarla!")
