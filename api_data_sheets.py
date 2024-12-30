@@ -4,9 +4,9 @@ import csv
 # Configurazioni
 API_KEY = "AIzaSyAwUffePIA3gL_Cz2qadHa6v-RFg9MWIZc"  # Inserisci qui la tua chiave API
 SPREADSHEET_ID = "143HgVSjT76Y38Lq4ZXSUQmw7ammbo5OT5k8LqYcmK04"  # ID del tuo Google Sheets
-COLUMN_C_RANGE = "'Risposte del modulo 1'!C2:C1000"  # Solo colonna C (Indirizzi)
-COLUMN_G_RANGE = "'Risposte del modulo 1'!G2:G1000"  # Solo colonna G (Nomi e Telefono)
-COLUMN_E_RANGE = "'Risposte del modulo 1'!E2:E1000"  # Solo colonna C (Indirizzi)
+COLUMN_D_RANGE = "'Risposte del modulo 1'!D2:D1000"  # Colonna D (Indirizzi)
+COLUMN_F_RANGE = "'Risposte del modulo 1'!F2:F1000"  # Colonna F (Numero di Persone)
+COLUMN_I_RANGE = "'Risposte del modulo 1'!I2:I1000"  # Colonna I (Nome e Numero di Telefono)
 
 # Funzione per ottenere i dati da una colonna specifica
 def get_google_sheet_data(range_name):
@@ -37,7 +37,7 @@ def geocode_address(address):
     return None, None
 
 # Funzione per salvare i dati in un file CSV
-def save_to_csv(data, filename="dati_geocodificati.csv"):
+def save_to_csv(data, filename="dati_ritorno.csv"):
     with open(filename, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         # Intestazioni CSV
@@ -49,17 +49,18 @@ def save_to_csv(data, filename="dati_geocodificati.csv"):
 # Script principale
 def main():
     # Step 1: Ottieni i dati dalle colonne
-    indirizzi = get_google_sheet_data(COLUMN_C_RANGE)  # Colonna C
-    nomi_telefoni = get_google_sheet_data(COLUMN_G_RANGE)  # Colonna G
-    numero_persone = get_google_sheet_data(COLUMN_E_RANGE)  # Colonna E
+    indirizzi = get_google_sheet_data(COLUMN_D_RANGE)  # Colonna D
+    numero_persone = get_google_sheet_data(COLUMN_F_RANGE)  # Colonna F
+    nomi_telefoni = get_google_sheet_data(COLUMN_I_RANGE)  # Colonna I
 
     # Step 2: Allinea i dati (considerando il numero massimo di righe)
     risultati = []
-    max_rows = max(len(indirizzi), len(nomi_telefoni), len(numero_persone))
+    max_rows = max(len(indirizzi), len(numero_persone), len(nomi_telefoni))
     for i in range(max_rows):
         indirizzo = indirizzi[i][0] if i < len(indirizzi) and indirizzi[i] else None
-        nome_telefono = nomi_telefoni[i][0] if i < len(nomi_telefoni) and nomi_telefoni[i] else None
         persone = numero_persone[i][0] if i < len(numero_persone) and numero_persone[i] else None
+        nome_telefono = nomi_telefoni[i][0] if i < len(nomi_telefoni) and nomi_telefoni[i] else None
+        print(indirizzo, persone, nome_telefono)
 
         if nome_telefono:
             # Dividi Nome, Cognome e Numero di Telefono
