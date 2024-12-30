@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bbc81d18f61ab4f95415979b0be123bc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        width: 180px;
+        height: auto;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 5px;
+        z-index: 1000;
+        font-size: 12px; 
+        line-height: 1.4;">
+        <b>Legenda:</b><br>
+    <u>Autisti:</u><br><i style="background: #08e294; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> CYRIL<br><i style="background: #8c0c54; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> FILI<br><i style="background: #455163; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> GIO<br><i style="background: #b99f03; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> GIO + VAN<br><i style="background: #7312e1; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> GIO E CIRI<br><i style="background: #29af6a; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> JACOPO<br><i style="background: #09bce3; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> BOH<br><i style="background: #b54ad7; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> LOCO<br><i style="background: #acbca8; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> BORSATO<br><u>Feste:</u><br><i style="background: orange; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> Festa Villani (Rovarè)<br><i style="background: blue; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> Festa Martini (Istrana)<br><i style="background: green; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> Festa Morandin<br><i style="background: magenta; width: 8px; height: 8px; display: inline-block; border-radius: 50%; margin-right: 5px;"></i> Perchè no? (Istrana)<br></div>
+    
+            <div class="folium-map" id="map_bbc81d18f61ab4f95415979b0be123bc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bbc81d18f61ab4f95415979b0be123bc = L.map(
+                "map_bbc81d18f61ab4f95415979b0be123bc",
+                {
+                    center: [45.6669, 12.242],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f8537bae5249c14a639d98baf6edfd69 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f8537bae5249c14a639d98baf6edfd69.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var circle_marker_e291ccce2b50c4b64516d54fb3ea844e = L.circleMarker(
+                [45.55792049999999, 12.2628863],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_4ed047d3fe20de15654afbb94bac4439 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e1b917995d4d46c7d1d5299b2c4c733 = $(`<div id="html_4e1b917995d4d46c7d1d5299b2c4c733" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Marco Milani<br><b>Telefono:</b> 3519918229<br><b>Indirizzo:</b> via del cotone 15 mogliano veneto<br><b>Numero di Persone:</b> 1<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_4ed047d3fe20de15654afbb94bac4439.setContent(html_4e1b917995d4d46c7d1d5299b2c4c733);
+            
+        
+
+        circle_marker_e291ccce2b50c4b64516d54fb3ea844e.bindPopup(popup_4ed047d3fe20de15654afbb94bac4439)
+        ;
+
+        
+    
+    
+            var circle_marker_a1dd27c09e658a217e64ddd936de215c = L.circleMarker(
+                [45.67044, 12.3262],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_6b79ff81c5620fc74b455c55706cb9a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f7e355175edcb724e9511dfc8f809f6 = $(`<div id="html_8f7e355175edcb724e9511dfc8f809f6" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Anna Piovesan<br><b>Telefono:</b> 3512380477<br><b>Indirizzo:</b> via Pisa ,4, Olmi <br><b>Numero di Persone:</b> 2<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_6b79ff81c5620fc74b455c55706cb9a2.setContent(html_8f7e355175edcb724e9511dfc8f809f6);
+            
+        
+
+        circle_marker_a1dd27c09e658a217e64ddd936de215c.bindPopup(popup_6b79ff81c5620fc74b455c55706cb9a2)
+        ;
+
+        
+    
+    
+            var circle_marker_ddbeb5e5335750c9d04276190272766f = L.circleMarker(
+                [45.5944913, 12.3225024],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_54ddb212cfebb7e7a198a35a18492e24 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b64f759b65ff1560993fd7d129443ba9 = $(`<div id="html_b64f759b65ff1560993fd7d129443ba9" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Olivia Schiavon<br><b>Telefono:</b> 3923764006<br><b>Indirizzo:</b> Via Re Ashoka 90, casale sul sile <br><b>Numero di Persone:</b> 2<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_54ddb212cfebb7e7a198a35a18492e24.setContent(html_b64f759b65ff1560993fd7d129443ba9);
+            
+        
+
+        circle_marker_ddbeb5e5335750c9d04276190272766f.bindPopup(popup_54ddb212cfebb7e7a198a35a18492e24)
+        ;
+
+        
+    
+    
+            var circle_marker_c0167ad338e0f73341eb111a21b1f31c = L.circleMarker(
+                [45.6001137, 12.3194398],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_9e57e4eb404c08809dd5624480e6f087 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0b83e0ca8386f49c4270e1f026fe01b = $(`<div id="html_e0b83e0ca8386f49c4270e1f026fe01b" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Andrea Felici<br><b>Telefono:</b> 3293937655<br><b>Indirizzo:</b> via monte cervino, 25, casale sul sile<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_9e57e4eb404c08809dd5624480e6f087.setContent(html_e0b83e0ca8386f49c4270e1f026fe01b);
+            
+        
+
+        circle_marker_c0167ad338e0f73341eb111a21b1f31c.bindPopup(popup_9e57e4eb404c08809dd5624480e6f087)
+        ;
+
+        
+    
+    
+            var circle_marker_00eb035efef8de61d5ae9efcd46b3d06 = L.circleMarker(
+                [45.5886394, 12.3312238],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_aa992cd1269c3b8f476026ea6c274c1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72de8aa5d8d34cd13ec8c0df2c70b35a = $(`<div id="html_72de8aa5d8d34cd13ec8c0df2c70b35a" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Beatrice La-Rocca<br><b>Telefono:</b> 3293405203<br><b>Indirizzo:</b> Via Leonardo da vinci 10, casale sul sile<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_aa992cd1269c3b8f476026ea6c274c1c.setContent(html_72de8aa5d8d34cd13ec8c0df2c70b35a);
+            
+        
+
+        circle_marker_00eb035efef8de61d5ae9efcd46b3d06.bindPopup(popup_aa992cd1269c3b8f476026ea6c274c1c)
+        ;
+
+        
+    
+    
+            var circle_marker_7a1f5c41fb3c576c68e787646fe2d7a1 = L.circleMarker(
+                [45.5403806, 12.2313292],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_29f77f629ebf3d8b637be355898beedb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99f74468246bf3ec1457d779a3111245 = $(`<div id="html_99f74468246bf3ec1457d779a3111245" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Anita Bonotto<br><b>Telefono:</b> 3317251538<br><b>Indirizzo:</b> Via della pace 18, mogliano veneto<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_29f77f629ebf3d8b637be355898beedb.setContent(html_99f74468246bf3ec1457d779a3111245);
+            
+        
+
+        circle_marker_7a1f5c41fb3c576c68e787646fe2d7a1.bindPopup(popup_29f77f629ebf3d8b637be355898beedb)
+        ;
+
+        
+    
+    
+            var circle_marker_70be43f5ca36f4c01a73d27d8b293082 = L.circleMarker(
+                [45.6451228, 12.3081325],
+                {"bubblingMouseEvents": true, "color": "#08e294", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#08e294", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_c89f618b4cab768623cf4d6386d0d395 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_485f84ce9313a78140280262bd01d459 = $(`<div id="html_485f84ce9313a78140280262bd01d459" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Tommaso De-Rossi<br><b>Telefono:</b> 3920190621<br><b>Indirizzo:</b> Via Fratelli Bandiera 2, silea<br><b>Numero di Persone:</b> 3<br><b>Autista:</b> CYRIL</div>`)[0];
+                popup_c89f618b4cab768623cf4d6386d0d395.setContent(html_485f84ce9313a78140280262bd01d459);
+            
+        
+
+        circle_marker_70be43f5ca36f4c01a73d27d8b293082.bindPopup(popup_c89f618b4cab768623cf4d6386d0d395)
+        ;
+
+        
+    
+    
+            var circle_marker_fde005d17116875d45085558dc7d3610 = L.circleMarker(
+                [45.740623, 12.2275913],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_e87bf20d9a4fa2c64a0e31a4b133db82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8a4f5f45270e18935a16699de1555ce = $(`<div id="html_e8a4f5f45270e18935a16699de1555ce" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Eleonora Amadio<br><b>Telefono:</b> 3285331553<br><b>Indirizzo:</b> Via caseggiato 16, Villorba<br><b>Numero di Persone:</b> 3<br><b>Autista:</b> FILI</div>`)[0];
+                popup_e87bf20d9a4fa2c64a0e31a4b133db82.setContent(html_e8a4f5f45270e18935a16699de1555ce);
+            
+        
+
+        circle_marker_fde005d17116875d45085558dc7d3610.bindPopup(popup_e87bf20d9a4fa2c64a0e31a4b133db82)
+        ;
+
+        
+    
+    
+            var circle_marker_def7aeb826103c726c2f5fa11caf8381 = L.circleMarker(
+                [45.7393627, 12.2328315],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_538adc187e0af50a4e56de02414cc29b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b30b1cfa0f63cc01984d20d13f3b6f40 = $(`<div id="html_b30b1cfa0f63cc01984d20d13f3b6f40" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Margherita Mason<br><b>Telefono:</b> 3496966379<br><b>Indirizzo:</b> Via Guglielmo Marconi, 8, Carità di Villorba<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> FILI</div>`)[0];
+                popup_538adc187e0af50a4e56de02414cc29b.setContent(html_b30b1cfa0f63cc01984d20d13f3b6f40);
+            
+        
+
+        circle_marker_def7aeb826103c726c2f5fa11caf8381.bindPopup(popup_538adc187e0af50a4e56de02414cc29b)
+        ;
+
+        
+    
+    
+            var circle_marker_77951234dfb1e192b7699ccb8dc34a65 = L.circleMarker(
+                [45.6691643, 12.2334375],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_bff2a140f101060bc2e73b0a2f123bb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4448734ca87b28eba6a7b7b5db2fe8cf = $(`<div id="html_4448734ca87b28eba6a7b7b5db2fe8cf" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Fiore Cicchetti<br><b>Telefono:</b> 3516551788<br><b>Indirizzo:</b> via fortunato venanzio 8, treviso<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> FILI</div>`)[0];
+                popup_bff2a140f101060bc2e73b0a2f123bb4.setContent(html_4448734ca87b28eba6a7b7b5db2fe8cf);
+            
+        
+
+        circle_marker_77951234dfb1e192b7699ccb8dc34a65.bindPopup(popup_bff2a140f101060bc2e73b0a2f123bb4)
+        ;
+
+        
+    
+    
+            var circle_marker_84a7626d88ae8c83009cc93babfd80ba = L.circleMarker(
+                [45.66799289999999, 12.2480465],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_c2d428d1891f807600325050050b518d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f3c0b32a1f87848ea94182e2bcb59caa = $(`<div id="html_f3c0b32a1f87848ea94182e2bcb59caa" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Sophie Cher<br><b>Telefono:</b> 3513650998<br><b>Indirizzo:</b> Piazza San Francesco 1, Treviso <br><b>Numero di Persone:</b> 8<br><b>Autista:</b> FILI</div>`)[0];
+                popup_c2d428d1891f807600325050050b518d.setContent(html_f3c0b32a1f87848ea94182e2bcb59caa);
+            
+        
+
+        circle_marker_84a7626d88ae8c83009cc93babfd80ba.bindPopup(popup_c2d428d1891f807600325050050b518d)
+        ;
+
+        
+    
+    
+            var circle_marker_756afab75689a6bf5eaa2ab2bfe5cbe6 = L.circleMarker(
+                [45.638513, 12.295201],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_6d71b7f43c24149da702a9180af75cca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40d4ab210d05046889220e9ccb1d79e9 = $(`<div id="html_40d4ab210d05046889220e9ccb1d79e9" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Leonardo Sartor<br><b>Telefono:</b> 3396488028<br><b>Indirizzo:</b> Vicolo Peschierette 1 Casier<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> FILI</div>`)[0];
+                popup_6d71b7f43c24149da702a9180af75cca.setContent(html_40d4ab210d05046889220e9ccb1d79e9);
+            
+        
+
+        circle_marker_756afab75689a6bf5eaa2ab2bfe5cbe6.bindPopup(popup_6d71b7f43c24149da702a9180af75cca)
+        ;
+
+        
+    
+    
+            var circle_marker_0055987e8df35a77ed43e7939ab81bc0 = L.circleMarker(
+                [45.6670033, 12.2349355],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_f6b89c37c9ace1c6d378414e0c869492 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56a7f5c463e7e2b345507fdb02038fbc = $(`<div id="html_56a7f5c463e7e2b345507fdb02038fbc" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Tommaso Zanon<br><b>Telefono:</b> 3917720803<br><b>Indirizzo:</b> Porta Santi Quaranta <br><b>Numero di Persone:</b> 2<br><b>Autista:</b> FILI</div>`)[0];
+                popup_f6b89c37c9ace1c6d378414e0c869492.setContent(html_56a7f5c463e7e2b345507fdb02038fbc);
+            
+        
+
+        circle_marker_0055987e8df35a77ed43e7939ab81bc0.bindPopup(popup_f6b89c37c9ace1c6d378414e0c869492)
+        ;
+
+        
+    
+    
+            var circle_marker_7c73d957157c857616b4786c2395b3a5 = L.circleMarker(
+                [45.6669338, 12.2430608],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_b465f3e64aac58ab9698c205ca80a81b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3241e0762cf29a9c5b4796413c8b9a05 = $(`<div id="html_3241e0762cf29a9c5b4796413c8b9a05" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Kristel Muharremi<br><b>Telefono:</b> 3923279203<br><b>Indirizzo:</b> Via Giuseppe verdi, treviso<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> FILI</div>`)[0];
+                popup_b465f3e64aac58ab9698c205ca80a81b.setContent(html_3241e0762cf29a9c5b4796413c8b9a05);
+            
+        
+
+        circle_marker_7c73d957157c857616b4786c2395b3a5.bindPopup(popup_b465f3e64aac58ab9698c205ca80a81b)
+        ;
+
+        
+    
+    
+            var circle_marker_63e0aecf80c0f2d84914e0a770c569fa = L.circleMarker(
+                [45.6682493, 12.2426296],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_59721aff36dc52131d7565dde765376e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af5b9d8177fb4824cbd561aabb65c9c1 = $(`<div id="html_af5b9d8177fb4824cbd561aabb65c9c1" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Ottavia-Camilla Carobba<br><b>Telefono:</b> 3932288444<br><b>Indirizzo:</b> Piazza Tommasini 4, treviso<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> FILI</div>`)[0];
+                popup_59721aff36dc52131d7565dde765376e.setContent(html_af5b9d8177fb4824cbd561aabb65c9c1);
+            
+        
+
+        circle_marker_63e0aecf80c0f2d84914e0a770c569fa.bindPopup(popup_59721aff36dc52131d7565dde765376e)
+        ;
+
+        
+    
+    
+            var circle_marker_6ee2430d77e17a06320f98e1da6e8bc7 = L.circleMarker(
+                [45.6622121, 12.247225],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_a04492e5d9c81d6d5d328b7e63eaa01c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_559bd3e138df06c696bada0bd59cf875 = $(`<div id="html_559bd3e138df06c696bada0bd59cf875" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Andrea Farinati<br><b>Telefono:</b> 3469467690<br><b>Indirizzo:</b> Via Pietro di Dante 1, treviso<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> FILI</div>`)[0];
+                popup_a04492e5d9c81d6d5d328b7e63eaa01c.setContent(html_559bd3e138df06c696bada0bd59cf875);
+            
+        
+
+        circle_marker_6ee2430d77e17a06320f98e1da6e8bc7.bindPopup(popup_a04492e5d9c81d6d5d328b7e63eaa01c)
+        ;
+
+        
+    
+    
+            var circle_marker_95e604af5e20532e9e5c4015923e82ca = L.circleMarker(
+                [45.6786599, 12.1263127],
+                {"bubblingMouseEvents": true, "color": "#8c0c54", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8c0c54", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_5351c96005e5d29dc7069714d876e6fd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4caffda8c0d7bcefa7004a3120106371 = $(`<div id="html_4caffda8c0d7bcefa7004a3120106371" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> ENRICO DONA<br><b>Telefono:</b> 3421280655<br><b>Indirizzo:</b> via castellana, padernello <br><b>Numero di Persone:</b> 8/20<br><b>Autista:</b> FILI</div>`)[0];
+                popup_5351c96005e5d29dc7069714d876e6fd.setContent(html_4caffda8c0d7bcefa7004a3120106371);
+            
+        
+
+        circle_marker_95e604af5e20532e9e5c4015923e82ca.bindPopup(popup_5351c96005e5d29dc7069714d876e6fd)
+        ;
+
+        
+    
+    
+            var circle_marker_167bb279cccae9a3815d16935f52261c = L.circleMarker(
+                [45.7550003, 12.2059951],
+                {"bubblingMouseEvents": true, "color": "#455163", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#455163", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_aebca0a6a50576ba1f23167e41d7f384 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aaad4915cde528695dbac92291f7bf26 = $(`<div id="html_aaad4915cde528695dbac92291f7bf26" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Christian Fogale<br><b>Telefono:</b> 3246898904<br><b>Indirizzo:</b> Via del Preve 2/1, povegliano<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> GIO</div>`)[0];
+                popup_aebca0a6a50576ba1f23167e41d7f384.setContent(html_aaad4915cde528695dbac92291f7bf26);
+            
+        
+
+        circle_marker_167bb279cccae9a3815d16935f52261c.bindPopup(popup_aebca0a6a50576ba1f23167e41d7f384)
+        ;
+
+        
+    
+    
+            var circle_marker_07fe474651b83df534b1f7997421ceef = L.circleMarker(
+                [45.6853721, 12.2153929],
+                {"bubblingMouseEvents": true, "color": "#455163", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#455163", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_40d195b7adc477359bf6871e14d1aa6f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b11eef7fa1b8cc674c9127ba17a8ca4 = $(`<div id="html_0b11eef7fa1b8cc674c9127ba17a8ca4" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Caterina Antoniazzi<br><b>Telefono:</b> 3931761761<br><b>Indirizzo:</b> Via bezzecca 61, treviso<br><b>Numero di Persone:</b> 1<br><b>Autista:</b> GIO</div>`)[0];
+                popup_40d195b7adc477359bf6871e14d1aa6f.setContent(html_0b11eef7fa1b8cc674c9127ba17a8ca4);
+            
+        
+
+        circle_marker_07fe474651b83df534b1f7997421ceef.bindPopup(popup_40d195b7adc477359bf6871e14d1aa6f)
+        ;
+
+        
+    
+    
+            var circle_marker_04bd642337a1db6083010a9dd1ce9b85 = L.circleMarker(
+                [45.55881000000001, 12.32085],
+                {"bubblingMouseEvents": true, "color": "#b99f03", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b99f03", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_2828aec75c04aaf35937e4b51e9c0b5f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a976e023a4946a4879600d170e496111 = $(`<div id="html_a976e023a4946a4879600d170e496111" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Filippo Giummolè<br><b>Telefono:</b> 3921255224<br><b>Indirizzo:</b> Via Giacomo Matteotti 39, Marcon <br><b>Numero di Persone:</b> 6<br><b>Autista:</b> GIO + VAN</div>`)[0];
+                popup_2828aec75c04aaf35937e4b51e9c0b5f.setContent(html_a976e023a4946a4879600d170e496111);
+            
+        
+
+        circle_marker_04bd642337a1db6083010a9dd1ce9b85.bindPopup(popup_2828aec75c04aaf35937e4b51e9c0b5f)
+        ;
+
+        
+    
+    
+            var circle_marker_73880b69ec3428b7f9c8bc55cc53f33d = L.circleMarker(
+                [45.565971, 12.3073517],
+                {"bubblingMouseEvents": true, "color": "#b99f03", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b99f03", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_1e4b4d77ef9df27c44e9db788810f439 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb20bd979eec9c8d43eaeed21d886f7d = $(`<div id="html_bb20bd979eec9c8d43eaeed21d886f7d" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Pellizzon Eleonora<br><b>Telefono:</b> 3500947201<br><b>Indirizzo:</b> Via Sant’ Antonio civ.5 Marcon (VE)<br><b>Numero di Persone:</b> 5<br><b>Autista:</b> GIO + VAN</div>`)[0];
+                popup_1e4b4d77ef9df27c44e9db788810f439.setContent(html_bb20bd979eec9c8d43eaeed21d886f7d);
+            
+        
+
+        circle_marker_73880b69ec3428b7f9c8bc55cc53f33d.bindPopup(popup_1e4b4d77ef9df27c44e9db788810f439)
+        ;
+
+        
+    
+    
+            var circle_marker_0b1f6b8aa6bdffcd79ca7bfe4ea4763a = L.circleMarker(
+                [45.6979598, 12.2903533],
+                {"bubblingMouseEvents": true, "color": "#455163", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#455163", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_6645c7e25cdc1f5159f4cb1fdcbf7138 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dae910c9c5da5614083b5ec41e3cbee9 = $(`<div id="html_dae910c9c5da5614083b5ec41e3cbee9" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Matilde Rigato<br><b>Telefono:</b> 3296145728<br><b>Indirizzo:</b> Via Cal di Breda 29, pezzan di carbonera<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> GIO</div>`)[0];
+                popup_6645c7e25cdc1f5159f4cb1fdcbf7138.setContent(html_dae910c9c5da5614083b5ec41e3cbee9);
+            
+        
+
+        circle_marker_0b1f6b8aa6bdffcd79ca7bfe4ea4763a.bindPopup(popup_6645c7e25cdc1f5159f4cb1fdcbf7138)
+        ;
+
+        
+    
+    
+            var circle_marker_efecf61af96a4dfbba7563cb2b534eff = L.circleMarker(
+                [45.6763592, 12.2805831],
+                {"bubblingMouseEvents": true, "color": "#7312e1", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#7312e1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_5c482b4fa8ced758784848418c62edb4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3dbdf362ab79c8897ab12406e4640589 = $(`<div id="html_3dbdf362ab79c8897ab12406e4640589" style="width: 100.0%; height: 100.0%;"><b>Nome:</b>  Marta Artuso<br><b>Telefono:</b> 3926598156<br><b>Indirizzo:</b> Via brigata Marche 165, Carbonera <br><b>Numero di Persone:</b> 5<br><b>Autista:</b> GIO E CIRI</div>`)[0];
+                popup_5c482b4fa8ced758784848418c62edb4.setContent(html_3dbdf362ab79c8897ab12406e4640589);
+            
+        
+
+        circle_marker_efecf61af96a4dfbba7563cb2b534eff.bindPopup(popup_5c482b4fa8ced758784848418c62edb4)
+        ;
+
+        
+    
+    
+            var circle_marker_69deece68e72f2cb17492937400e7fbf = L.circleMarker(
+                [45.6153341, 12.2824208],
+                {"bubblingMouseEvents": true, "color": "#455163", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#455163", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_e6e7c9f6c9f97cb4b993f9511a600c53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ae7d51c8725fc68e082474ed53184f8b = $(`<div id="html_ae7d51c8725fc68e082474ed53184f8b" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Leonardo Marangon<br><b>Telefono:</b> 3388201889<br><b>Indirizzo:</b> Via serraglia 5, conscio di casale sul sile <br><b>Numero di Persone:</b> 3<br><b>Autista:</b> GIO</div>`)[0];
+                popup_e6e7c9f6c9f97cb4b993f9511a600c53.setContent(html_ae7d51c8725fc68e082474ed53184f8b);
+            
+        
+
+        circle_marker_69deece68e72f2cb17492937400e7fbf.bindPopup(popup_e6e7c9f6c9f97cb4b993f9511a600c53)
+        ;
+
+        
+    
+    
+            var circle_marker_9fa01e83d550d3d30333457b6260abe1 = L.circleMarker(
+                [45.64721249999999, 12.2676909],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_7c8a0748b1d7480e0ada8205bf18f6bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5cca872ab787044c2ba8295ffe73a401 = $(`<div id="html_5cca872ab787044c2ba8295ffe73a401" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Annachiara Rossi<br><b>Telefono:</b> 3343264673<br><b>Indirizzo:</b> Viale Louis Pasteur, 6, treviso<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_7c8a0748b1d7480e0ada8205bf18f6bb.setContent(html_5cca872ab787044c2ba8295ffe73a401);
+            
+        
+
+        circle_marker_9fa01e83d550d3d30333457b6260abe1.bindPopup(popup_7c8a0748b1d7480e0ada8205bf18f6bb)
+        ;
+
+        
+    
+    
+            var circle_marker_26da8a7ef57946e9a898c8fda83a2c50 = L.circleMarker(
+                [45.6412955, 12.1959722],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_01749c56b8b1e31ad074d27fba185f87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c93a44d1aa99b525d6022dbf7c9a147d = $(`<div id="html_c93a44d1aa99b525d6022dbf7c9a147d" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Giorgia Cavasin<br><b>Telefono:</b> 389 933 9032<br><b>Indirizzo:</b> Via Canizzano, 83, treviso<br><b>Numero di Persone:</b> 3<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_01749c56b8b1e31ad074d27fba185f87.setContent(html_c93a44d1aa99b525d6022dbf7c9a147d);
+            
+        
+
+        circle_marker_26da8a7ef57946e9a898c8fda83a2c50.bindPopup(popup_01749c56b8b1e31ad074d27fba185f87)
+        ;
+
+        
+    
+    
+            var circle_marker_5ea0dcf85cfe95b49fe96dc4672a9b15 = L.circleMarker(
+                [45.6892424, 12.2815448],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_26116eda13d61805ba18f6ad7039e53c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f70478de2cc271721d15770ee0ebc0f2 = $(`<div id="html_f70478de2cc271721d15770ee0ebc0f2" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> matilde boscutti<br><b>Telefono:</b> 3426412814<br><b>Indirizzo:</b> via isola di pago 12, carbonera<br><b>Numero di Persone:</b> 5<br><b>Autista:</b> BOH</div>`)[0];
+                popup_26116eda13d61805ba18f6ad7039e53c.setContent(html_f70478de2cc271721d15770ee0ebc0f2);
+            
+        
+
+        circle_marker_5ea0dcf85cfe95b49fe96dc4672a9b15.bindPopup(popup_26116eda13d61805ba18f6ad7039e53c)
+        ;
+
+        
+    
+    
+            var circle_marker_5d94403c234bd74131462d913b6a8f8b = L.circleMarker(
+                [45.6904152, 12.1260386],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_4a7f03c8fa4d502954463246c59088fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9b47267dfff831f10627d5980aa8bfa = $(`<div id="html_b9b47267dfff831f10627d5980aa8bfa" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Beatrice Pavanello<br><b>Telefono:</b> 3471264195<br><b>Indirizzo:</b> via Bassano,12 , Padernello <br><b>Numero di Persone:</b> 3<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_4a7f03c8fa4d502954463246c59088fc.setContent(html_b9b47267dfff831f10627d5980aa8bfa);
+            
+        
+
+        circle_marker_5d94403c234bd74131462d913b6a8f8b.bindPopup(popup_4a7f03c8fa4d502954463246c59088fc)
+        ;
+
+        
+    
+    
+            var circle_marker_e63a99b23d0dcf2f173b2f9932e3a839 = L.circleMarker(
+                [45.6893347, 12.1828863],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_02c28640527f253ed976c8cb4a502ad7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21a9f75b2f22d6f93356ffbd3ddb8c38 = $(`<div id="html_21a9f75b2f22d6f93356ffbd3ddb8c38" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Michele Calzavara<br><b>Telefono:</b> 3459484627<br><b>Indirizzo:</b> Piazza san mauro, castagnole<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_02c28640527f253ed976c8cb4a502ad7.setContent(html_21a9f75b2f22d6f93356ffbd3ddb8c38);
+            
+        
+
+        circle_marker_e63a99b23d0dcf2f173b2f9932e3a839.bindPopup(popup_02c28640527f253ed976c8cb4a502ad7)
+        ;
+
+        
+    
+    
+            var circle_marker_1488ee575c9015ffdb0c85232dd39cb5 = L.circleMarker(
+                [45.66644429999999, 12.1631821],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_b4d1856c1689ed10d2cdcf2d4a048771 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_371d953bbef5cdccb92a1e868b0c12ad = $(`<div id="html_371d953bbef5cdccb92a1e868b0c12ad" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Alessandro Lucato<br><b>Telefono:</b> 3924959795<br><b>Indirizzo:</b> via arturo toscanini, 2/b, Paese<br><b>Numero di Persone:</b> 1<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_b4d1856c1689ed10d2cdcf2d4a048771.setContent(html_371d953bbef5cdccb92a1e868b0c12ad);
+            
+        
+
+        circle_marker_1488ee575c9015ffdb0c85232dd39cb5.bindPopup(popup_b4d1856c1689ed10d2cdcf2d4a048771)
+        ;
+
+        
+    
+    
+            var circle_marker_f66a4eceb530cb4cb5f582d269f569cc = L.circleMarker(
+                [45.6786599, 12.1263127],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_3a818eccc97ea29a1225e2ed27012f48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6bd3d15f3dcfbecf88a4b6d1315b91fd = $(`<div id="html_6bd3d15f3dcfbecf88a4b6d1315b91fd" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> ENRICO DONA<br><b>Telefono:</b> 3421280655<br><b>Indirizzo:</b> via castellana, Padernello<br><b>Numero di Persone:</b> 16/20<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_3a818eccc97ea29a1225e2ed27012f48.setContent(html_6bd3d15f3dcfbecf88a4b6d1315b91fd);
+            
+        
+
+        circle_marker_f66a4eceb530cb4cb5f582d269f569cc.bindPopup(popup_3a818eccc97ea29a1225e2ed27012f48)
+        ;
+
+        
+    
+    
+            var circle_marker_095e78cde09c39844cc01a19765bfd85 = L.circleMarker(
+                [45.7740624, 12.2566639],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_9231139299447c2c8fd5cd3c3bbbe63c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb4af3eed56e1febfacde87b86b370e5 = $(`<div id="html_cb4af3eed56e1febfacde87b86b370e5" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> ion cocervei<br><b>Telefono:</b> 3921117580<br><b>Indirizzo:</b> via antonio meucci 1, spresiano<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_9231139299447c2c8fd5cd3c3bbbe63c.setContent(html_cb4af3eed56e1febfacde87b86b370e5);
+            
+        
+
+        circle_marker_095e78cde09c39844cc01a19765bfd85.bindPopup(popup_9231139299447c2c8fd5cd3c3bbbe63c)
+        ;
+
+        
+    
+    
+            var circle_marker_e1ff061abd207ecf6f9a8aeb7a645721 = L.circleMarker(
+                [45.7814384, 12.2589462],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_1ec33ea87660e678fa0785a11ed6ad78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74be1bbe7c6f5414e7fb6d1c92614526 = $(`<div id="html_74be1bbe7c6f5414e7fb6d1c92614526" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Christian Betolian<br><b>Telefono:</b> 3898795993<br><b>Indirizzo:</b> Via Nazionale, 31, Spresiano<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_1ec33ea87660e678fa0785a11ed6ad78.setContent(html_74be1bbe7c6f5414e7fb6d1c92614526);
+            
+        
+
+        circle_marker_e1ff061abd207ecf6f9a8aeb7a645721.bindPopup(popup_1ec33ea87660e678fa0785a11ed6ad78)
+        ;
+
+        
+    
+    
+            var circle_marker_9a791b65d54743f2860c3d81b4f115ec = L.circleMarker(
+                [45.5403806, 12.2313292],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_3abb350b2cb97098d977b26ae5d100a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16df4f8415b5327060e86d179ab92d17 = $(`<div id="html_16df4f8415b5327060e86d179ab92d17" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Anita Bonotto<br><b>Telefono:</b> 3317251538<br><b>Indirizzo:</b> Via della Pace 18, Mogliano Veneto<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_3abb350b2cb97098d977b26ae5d100a3.setContent(html_16df4f8415b5327060e86d179ab92d17);
+            
+        
+
+        circle_marker_9a791b65d54743f2860c3d81b4f115ec.bindPopup(popup_3abb350b2cb97098d977b26ae5d100a3)
+        ;
+
+        
+    
+    
+            var circle_marker_0b77b5465e1a30ded1c356b2c6003461 = L.circleMarker(
+                [45.6758385, 12.207553],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_e304d2f23e56f33ae2142498f807e2eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ec5b7108ae90103e352396a3728b5ae = $(`<div id="html_2ec5b7108ae90103e352396a3728b5ae" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Giorgio Marcuzzo<br><b>Telefono:</b> 3387690100<br><b>Indirizzo:</b> Via Sant'Elena imperatrice, Treviso <br><b>Numero di Persone:</b> 4<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_e304d2f23e56f33ae2142498f807e2eb.setContent(html_2ec5b7108ae90103e352396a3728b5ae);
+            
+        
+
+        circle_marker_0b77b5465e1a30ded1c356b2c6003461.bindPopup(popup_e304d2f23e56f33ae2142498f807e2eb)
+        ;
+
+        
+    
+    
+            var circle_marker_a94d24a5d6a95a468f90e5889daa2008 = L.circleMarker(
+                [45.711416, 12.2159372],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_7e06a320de0c9cdb1a286ea67b0a8439 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c03200d39928f5fc2c3df3821bfa05b = $(`<div id="html_5c03200d39928f5fc2c3df3821bfa05b" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Vincenzo Bocchetti<br><b>Telefono:</b> 3284555567<br><b>Indirizzo:</b> Via Giuseppe Garibaldi 10, ponzano<br><b>Numero di Persone:</b> 8<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_7e06a320de0c9cdb1a286ea67b0a8439.setContent(html_5c03200d39928f5fc2c3df3821bfa05b);
+            
+        
+
+        circle_marker_a94d24a5d6a95a468f90e5889daa2008.bindPopup(popup_7e06a320de0c9cdb1a286ea67b0a8439)
+        ;
+
+        
+    
+    
+            var circle_marker_cd37e2a4648b0e1f94fe83ea30d21b67 = L.circleMarker(
+                [45.6723626, 12.233531],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_515685e53fcb127daaf1405bbe91e89e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea172d177423a702073d7d1f06938c63 = $(`<div id="html_ea172d177423a702073d7d1f06938c63" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Luca pasubini<br><b>Telefono:</b> 3473384508<br><b>Indirizzo:</b> Via montepiana 3, treviso<br><b>Numero di Persone:</b> 5<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_515685e53fcb127daaf1405bbe91e89e.setContent(html_ea172d177423a702073d7d1f06938c63);
+            
+        
+
+        circle_marker_cd37e2a4648b0e1f94fe83ea30d21b67.bindPopup(popup_515685e53fcb127daaf1405bbe91e89e)
+        ;
+
+        
+    
+    
+            var circle_marker_72bac4e6138362802af63c80bc4eb469 = L.circleMarker(
+                [45.6568981, 12.2400979],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_681d6ee0c2f082d2c567e6c00a997d3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d4a564f26151f3014229c9a59e8e985 = $(`<div id="html_7d4a564f26151f3014229c9a59e8e985" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Tommaso Bergamasco<br><b>Telefono:</b> 3341371033<br><b>Indirizzo:</b> Via San Zeno 30, Treviso<br><b>Numero di Persone:</b> 3<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_681d6ee0c2f082d2c567e6c00a997d3d.setContent(html_7d4a564f26151f3014229c9a59e8e985);
+            
+        
+
+        circle_marker_72bac4e6138362802af63c80bc4eb469.bindPopup(popup_681d6ee0c2f082d2c567e6c00a997d3d)
+        ;
+
+        
+    
+    
+            var circle_marker_b5f8becc852a9c4953d4f22594b2d115 = L.circleMarker(
+                [45.7068417, 12.3527825],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_d3961412ab499765b4dade3f38328756 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13fab833382e999c06f0ca76670cddcd = $(`<div id="html_13fab833382e999c06f0ca76670cddcd" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Daniel Campion<br><b>Telefono:</b> 333 3566531<br><b>Indirizzo:</b> Via Cal Del Brolo 32/A, pero di breda di piave<br><b>Numero di Persone:</b> 1<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_d3961412ab499765b4dade3f38328756.setContent(html_13fab833382e999c06f0ca76670cddcd);
+            
+        
+
+        circle_marker_b5f8becc852a9c4953d4f22594b2d115.bindPopup(popup_d3961412ab499765b4dade3f38328756)
+        ;
+
+        
+    
+    
+            var circle_marker_fc3cc0d49f650dbdda84ea33031035f7 = L.circleMarker(
+                [45.66149919999999, 12.2451696],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_41605a2df651a53b387c81e2a7b39e6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_effcb67c909f828683750171141727b4 = $(`<div id="html_effcb67c909f828683750171141727b4" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Rachele Pavan<br><b>Telefono:</b> 3888731969<br><b>Indirizzo:</b> treviso autostazione <br><b>Numero di Persone:</b> 6<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_41605a2df651a53b387c81e2a7b39e6d.setContent(html_effcb67c909f828683750171141727b4);
+            
+        
+
+        circle_marker_fc3cc0d49f650dbdda84ea33031035f7.bindPopup(popup_41605a2df651a53b387c81e2a7b39e6d)
+        ;
+
+        
+    
+    
+            var circle_marker_17247fb41e0993ff5e987c5c061e7ae6 = L.circleMarker(
+                [45.6780586, 12.401103],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_edc41e8b8a7c3994458d526ab4a22099 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d68fe4fc651f421953e3697b40f442e7 = $(`<div id="html_d68fe4fc651f421953e3697b40f442e7" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Via Isaia<br><b>Telefono:</b> Irti 44, Spresiano<br><b>Indirizzo:</b> Villa Navagero Erizzo, Rovaré<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_edc41e8b8a7c3994458d526ab4a22099.setContent(html_d68fe4fc651f421953e3697b40f442e7);
+            
+        
+
+        circle_marker_17247fb41e0993ff5e987c5c061e7ae6.bindPopup(popup_edc41e8b8a7c3994458d526ab4a22099)
+        ;
+
+        
+    
+    
+            var circle_marker_ec907ccc22a4ba1c2d3d6b4c982b9499 = L.circleMarker(
+                [45.641402, 12.2961219],
+                {"bubblingMouseEvents": true, "color": "#acbca8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acbca8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_c9e3750a970c6b4d9d5ecb3c61b4da07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8ac338b3956b25a7f7c20e2fab0ce3ea = $(`<div id="html_8ac338b3956b25a7f7c20e2fab0ce3ea" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> marco vido<br><b>Telefono:</b> 3299897846<br><b>Indirizzo:</b> via corte d’assisi 24, casier<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> BORSATO</div>`)[0];
+                popup_c9e3750a970c6b4d9d5ecb3c61b4da07.setContent(html_8ac338b3956b25a7f7c20e2fab0ce3ea);
+            
+        
+
+        circle_marker_ec907ccc22a4ba1c2d3d6b4c982b9499.bindPopup(popup_c9e3750a970c6b4d9d5ecb3c61b4da07)
+        ;
+
+        
+    
+    
+            var circle_marker_069036a9099c1c48e2ef35d469781aea = L.circleMarker(
+                [45.6772583, 12.1568433],
+                {"bubblingMouseEvents": true, "color": "#acbca8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acbca8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_8c78aa199c6c6ea608e3f5496693bc55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0226a8588d98323e9e08697a858a2a5a = $(`<div id="html_0226a8588d98323e9e08697a858a2a5a" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Lorenzo Biscaro<br><b>Telefono:</b> 3518964600<br><b>Indirizzo:</b> Piazza Mons. Andreotti, Paese <br><b>Numero di Persone:</b> 4<br><b>Autista:</b> BORSATO</div>`)[0];
+                popup_8c78aa199c6c6ea608e3f5496693bc55.setContent(html_0226a8588d98323e9e08697a858a2a5a);
+            
+        
+
+        circle_marker_069036a9099c1c48e2ef35d469781aea.bindPopup(popup_8c78aa199c6c6ea608e3f5496693bc55)
+        ;
+
+        
+    
+    
+            var circle_marker_984d50c0d82a4c28c522c16a9922fc8a = L.circleMarker(
+                [45.5643818, 12.2298844],
+                {"bubblingMouseEvents": true, "color": "#acbca8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acbca8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_8d07587a21a98ac23c7ce47d63ad9397 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d40cf8b36ce0ff7df9da94dfa3e2578e = $(`<div id="html_d40cf8b36ce0ff7df9da94dfa3e2578e" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Elisa Miotto<br><b>Telefono:</b> 3276355821<br><b>Indirizzo:</b> via Nazario Sauro 30E, mogliano veneto<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> BORSATO</div>`)[0];
+                popup_8d07587a21a98ac23c7ce47d63ad9397.setContent(html_d40cf8b36ce0ff7df9da94dfa3e2578e);
+            
+        
+
+        circle_marker_984d50c0d82a4c28c522c16a9922fc8a.bindPopup(popup_8d07587a21a98ac23c7ce47d63ad9397)
+        ;
+
+        
+    
+    
+            var circle_marker_2e6578612923345d296abcef29fd1b5a = L.circleMarker(
+                [45.775272, 12.2740169],
+                {"bubblingMouseEvents": true, "color": "#acbca8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acbca8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_5f874c3727e707a18ad5efb7bcd1f8a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_099bcfe7a9657b65fea2f9f72f165327 = $(`<div id="html_099bcfe7a9657b65fea2f9f72f165327" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Dejan Chinellato<br><b>Telefono:</b> 3296594056<br><b>Indirizzo:</b> Via fornasette 19, spresiano<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> BORSATO</div>`)[0];
+                popup_5f874c3727e707a18ad5efb7bcd1f8a6.setContent(html_099bcfe7a9657b65fea2f9f72f165327);
+            
+        
+
+        circle_marker_2e6578612923345d296abcef29fd1b5a.bindPopup(popup_5f874c3727e707a18ad5efb7bcd1f8a6)
+        ;
+
+        
+    
+    
+            var circle_marker_0e10a8642782b5a331d36f4a4f765774 = L.circleMarker(
+                [45.7129424, 12.2652768],
+                {"bubblingMouseEvents": true, "color": "#acbca8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acbca8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_9358ee090cb1401d4a06b30c53218deb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61f65cb773ae4e05e7cb1e9f0e25bc90 = $(`<div id="html_61f65cb773ae4e05e7cb1e9f0e25bc90" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Chiara Tiveron<br><b>Telefono:</b> 3441668571<br><b>Indirizzo:</b> Vicolo Dante Alighieri 6, Carità di Villorba (TV)<br><b>Numero di Persone:</b> 2<br><b>Autista:</b> BORSATO</div>`)[0];
+                popup_9358ee090cb1401d4a06b30c53218deb.setContent(html_61f65cb773ae4e05e7cb1e9f0e25bc90);
+            
+        
+
+        circle_marker_0e10a8642782b5a331d36f4a4f765774.bindPopup(popup_9358ee090cb1401d4a06b30c53218deb)
+        ;
+
+        
+    
+    
+            var circle_marker_adf3fb467417840a0d6f046a71a65906 = L.circleMarker(
+                [45.6786599, 12.1263127],
+                {"bubblingMouseEvents": true, "color": "#acbca8", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#acbca8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_452d956bf8afb98b86b76e071cb451d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a757fa8a862bed5b8ed57c42b116fe16 = $(`<div id="html_a757fa8a862bed5b8ed57c42b116fe16" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> ENRICO DONA<br><b>Telefono:</b> 3421280655<br><b>Indirizzo:</b> via castellana, padernello<br><b>Numero di Persone:</b> 20/20<br><b>Autista:</b> BORSATO</div>`)[0];
+                popup_452d956bf8afb98b86b76e071cb451d5.setContent(html_a757fa8a862bed5b8ed57c42b116fe16);
+            
+        
+
+        circle_marker_adf3fb467417840a0d6f046a71a65906.bindPopup(popup_452d956bf8afb98b86b76e071cb451d5)
+        ;
+
+        
+    
+    
+            var circle_marker_a79f4b03d38b140677e32a65865838fa = L.circleMarker(
+                [45.6390469, 12.2407499],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_4ac7f424597abb97775b339f7a148432 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9991c49781351e66ff24135192a13ec = $(`<div id="html_e9991c49781351e66ff24135192a13ec" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Giulia Orsi<br><b>Telefono:</b> 3519212623<br><b>Indirizzo:</b> Via Terragliol, 75, 31022 Frescada TV<br><b>Numero di Persone:</b> 3<br><b>Autista:</b> BOH</div>`)[0];
+                popup_4ac7f424597abb97775b339f7a148432.setContent(html_e9991c49781351e66ff24135192a13ec);
+            
+        
+
+        circle_marker_a79f4b03d38b140677e32a65865838fa.bindPopup(popup_4ac7f424597abb97775b339f7a148432)
+        ;
+
+        
+    
+    
+            var circle_marker_fc9000e0f717da7079b5785514f5da77 = L.circleMarker(
+                [45.6892424, 12.2815448],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_76137adfa5fdc5a95f4d6c9b4607d12d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16cbd35e6d9ff22715363c66a03968e2 = $(`<div id="html_16cbd35e6d9ff22715363c66a03968e2" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> matilde boscutti<br><b>Telefono:</b> 3426412814<br><b>Indirizzo:</b> via isola di pago 12<br><b>Numero di Persone:</b> 5<br><b>Autista:</b> BOH</div>`)[0];
+                popup_76137adfa5fdc5a95f4d6c9b4607d12d.setContent(html_16cbd35e6d9ff22715363c66a03968e2);
+            
+        
+
+        circle_marker_fc9000e0f717da7079b5785514f5da77.bindPopup(popup_76137adfa5fdc5a95f4d6c9b4607d12d)
+        ;
+
+        
+    
+    
+            var circle_marker_12a465c663cab367a4881013c526593f = L.circleMarker(
+                [45.669103, 12.26264],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_e81a8351410d62db27588031c520a392 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95609a0cf3734512452ee883c3229152 = $(`<div id="html_95609a0cf3734512452ee883c3229152" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Vittoria Imbruglia<br><b>Telefono:</b> 3427435931<br><b>Indirizzo:</b> Via vicolo giacomo zanella 2b, selvana<br><b>Numero di Persone:</b> 4<br><b>Autista:</b> BOH</div>`)[0];
+                popup_e81a8351410d62db27588031c520a392.setContent(html_95609a0cf3734512452ee883c3229152);
+            
+        
+
+        circle_marker_12a465c663cab367a4881013c526593f.bindPopup(popup_e81a8351410d62db27588031c520a392)
+        ;
+
+        
+    
+    
+            var circle_marker_128ee0011a28d7f3e46e8029ebe3b6eb = L.circleMarker(
+                [45.66149919999999, 12.2451696],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_7fa4cc741f4473685714b9d6a1fe9e79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8b9b8809530dd2b4f7e405a3b7e871f = $(`<div id="html_d8b9b8809530dd2b4f7e405a3b7e871f" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> RACHELE PAVAN<br><b>Telefono:</b> 3509312540<br><b>Indirizzo:</b> treviso autostazione<br><b>Numero di Persone:</b> 6<br><b>Autista:</b> BOH</div>`)[0];
+                popup_7fa4cc741f4473685714b9d6a1fe9e79.setContent(html_d8b9b8809530dd2b4f7e405a3b7e871f);
+            
+        
+
+        circle_marker_128ee0011a28d7f3e46e8029ebe3b6eb.bindPopup(popup_7fa4cc741f4473685714b9d6a1fe9e79)
+        ;
+
+        
+    
+    
+            var circle_marker_4b5d2a0ddea68d13a07bf8728feeef49 = L.circleMarker(
+                [45.6873911, 12.2059496],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_813de776fec02e054802d2ec84f5d18b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5c7470ddf0f08892847963b2dcd35c4 = $(`<div id="html_b5c7470ddf0f08892847963b2dcd35c4" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Gaia Alfieri<br><b>Telefono:</b> 3319818660<br><b>Indirizzo:</b> Viale Nazioni Unite 97/C, Treviso <br><b>Numero di Persone:</b> 4<br><b>Autista:</b> BOH</div>`)[0];
+                popup_813de776fec02e054802d2ec84f5d18b.setContent(html_b5c7470ddf0f08892847963b2dcd35c4);
+            
+        
+
+        circle_marker_4b5d2a0ddea68d13a07bf8728feeef49.bindPopup(popup_813de776fec02e054802d2ec84f5d18b)
+        ;
+
+        
+    
+    
+            var circle_marker_e787a4137814a8e5967ce8bc6ee49ff5 = L.circleMarker(
+                [45.63601680000001, 12.2449992],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_6f53bd94f9a2a5fdfe1af099943bc10c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4e16f09f744fea458dd82c8aaa9b0cb0 = $(`<div id="html_4e16f09f744fea458dd82c8aaa9b0cb0" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Giulia Orsi<br><b>Telefono:</b> 3519212623<br><b>Indirizzo:</b> Via terragliol 75, frescada<br><b>Numero di Persone:</b> 3<br><b>Autista:</b> BOH</div>`)[0];
+                popup_6f53bd94f9a2a5fdfe1af099943bc10c.setContent(html_4e16f09f744fea458dd82c8aaa9b0cb0);
+            
+        
+
+        circle_marker_e787a4137814a8e5967ce8bc6ee49ff5.bindPopup(popup_6f53bd94f9a2a5fdfe1af099943bc10c)
+        ;
+
+        
+    
+    
+            var circle_marker_96378318c441473ecf324cb01c73eaed = L.circleMarker(
+                [45.7019658, 12.141779],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_aa5f226adaea6df63e34dbf2fdea8bea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0cbf4094127da95bf9033051f82afc7 = $(`<div id="html_b0cbf4094127da95bf9033051f82afc7" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Alessandro Vacilotto<br><b>Telefono:</b> 3470385303<br><b>Indirizzo:</b> Via Sorvenigo, 18, Porcellengo di Paese <br><b>Numero di Persone:</b> 6<br><b>Autista:</b> BOH</div>`)[0];
+                popup_aa5f226adaea6df63e34dbf2fdea8bea.setContent(html_b0cbf4094127da95bf9033051f82afc7);
+            
+        
+
+        circle_marker_96378318c441473ecf324cb01c73eaed.bindPopup(popup_aa5f226adaea6df63e34dbf2fdea8bea)
+        ;
+
+        
+    
+    
+            var circle_marker_52015fbb5ff0c1d185970b982d138530 = L.circleMarker(
+                [45.6873911, 12.2059496],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_f2243dbb8375791e4bd7613565e5c08b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cacb3214085ec99228c7ea95659a7b5a = $(`<div id="html_cacb3214085ec99228c7ea95659a7b5a" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Gaia Alfieri<br><b>Telefono:</b> 3319818660<br><b>Indirizzo:</b> Viale Nazioni Unite 97/C, Treviso <br><b>Numero di Persone:</b> 4<br><b>Autista:</b> BOH</div>`)[0];
+                popup_f2243dbb8375791e4bd7613565e5c08b.setContent(html_cacb3214085ec99228c7ea95659a7b5a);
+            
+        
+
+        circle_marker_52015fbb5ff0c1d185970b982d138530.bindPopup(popup_f2243dbb8375791e4bd7613565e5c08b)
+        ;
+
+        
+    
+    
+            var circle_marker_0069968fcf30da9f6cabcf6749edbf9b = L.circleMarker(
+                [45.6617393, 12.2937714],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_27fefae6e40bf0d6804df6a29a090e85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4b3884d18a8bc6c6714ea3d4edaf9289 = $(`<div id="html_4b3884d18a8bc6c6714ea3d4edaf9289" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Michele Pressello<br><b>Telefono:</b> 3924834134<br><b>Indirizzo:</b> Via Massolini, 1, Silea<br><b>Numero di Persone:</b> 1<br><b>Autista:</b> BOH</div>`)[0];
+                popup_27fefae6e40bf0d6804df6a29a090e85.setContent(html_4b3884d18a8bc6c6714ea3d4edaf9289);
+            
+        
+
+        circle_marker_0069968fcf30da9f6cabcf6749edbf9b.bindPopup(popup_27fefae6e40bf0d6804df6a29a090e85)
+        ;
+
+        
+    
+    
+            var circle_marker_6d0e0d0badfc8c26c3ce6ead19c238b7 = L.circleMarker(
+                [45.6780586, 12.401103],
+                {"bubblingMouseEvents": true, "color": "#09bce3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#09bce3", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_70c311288a9fcf0384abb8155d63e145 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1397599fa86fb84b00621e146378f3a = $(`<div id="html_e1397599fa86fb84b00621e146378f3a" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Valentina Danieli<br><b>Telefono:</b> 3711234077<br><b>Indirizzo:</b> Villa Navagero <br><b>Numero di Persone:</b> 1<br><b>Autista:</b> BOH</div>`)[0];
+                popup_70c311288a9fcf0384abb8155d63e145.setContent(html_e1397599fa86fb84b00621e146378f3a);
+            
+        
+
+        circle_marker_6d0e0d0badfc8c26c3ce6ead19c238b7.bindPopup(popup_70c311288a9fcf0384abb8155d63e145)
+        ;
+
+        
+    
+    
+            var circle_marker_6ba417841cb9561eed574a426aedf8e2 = L.circleMarker(
+                [45.558514, 12.107873],
+                {"bubblingMouseEvents": true, "color": "#b54ad7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#b54ad7", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_f4472217a99acf22eb7141e14b11703a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a35952f410996e1f06064c3171623fa = $(`<div id="html_7a35952f410996e1f06064c3171623fa" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Davide Mogno<br><b>Telefono:</b> 3714217852<br><b>Indirizzo:</b> Via Alcide de gasperi 41, Scorzè<br><b>Numero di Persone:</b> 7<br><b>Autista:</b> LOCO</div>`)[0];
+                popup_f4472217a99acf22eb7141e14b11703a.setContent(html_7a35952f410996e1f06064c3171623fa);
+            
+        
+
+        circle_marker_6ba417841cb9561eed574a426aedf8e2.bindPopup(popup_f4472217a99acf22eb7141e14b11703a)
+        ;
+
+        
+    
+    
+            var circle_marker_b9685ef537cc6e521ca862e42cb4056f = L.circleMarker(
+                [45.6670033, 12.2349355],
+                {"bubblingMouseEvents": true, "color": "#29af6a", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#29af6a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+        var popup_3acf3a413830166a8d3e0afa71230c37 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdbaebd52c2c47095121bd4d6cf723f4 = $(`<div id="html_cdbaebd52c2c47095121bd4d6cf723f4" style="width: 100.0%; height: 100.0%;"><b>Nome:</b> Tommaso Zanon<br><b>Telefono:</b> 3917720803<br><b>Indirizzo:</b> Porta Santi Quaranta Treviso <br><b>Numero di Persone:</b> 8<br><b>Autista:</b> JACOPO</div>`)[0];
+                popup_3acf3a413830166a8d3e0afa71230c37.setContent(html_cdbaebd52c2c47095121bd4d6cf723f4);
+            
+        
+
+        circle_marker_b9685ef537cc6e521ca862e42cb4056f.bindPopup(popup_3acf3a413830166a8d3e0afa71230c37)
+        ;
+
+        
+    
+    
+            var feature_group_4bd906dab56f4f628d57c78fb9407447 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_2c635db588c7a669bc09eb4a22f81da7 = L.marker(
+                [45.678133561178804, 12.401392678558162],
+                {
+}
+            ).addTo(feature_group_4bd906dab56f4f628d57c78fb9407447);
+        
+    
+            var icon_0a31bb39e13b13c21f11d0db298c85e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2c635db588c7a669bc09eb4a22f81da7.setIcon(icon_0a31bb39e13b13c21f11d0db298c85e2);
+        
+    
+        var popup_8d30648ea4fedfdd9275ec21b2e4b3d5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ec418c1b9adb43e3a2f0135335f92e4 = $(`<div id="html_7ec418c1b9adb43e3a2f0135335f92e4" style="width: 100.0%; height: 100.0%;"><b>Festa Villani (Rovarè)</b></div>`)[0];
+                popup_8d30648ea4fedfdd9275ec21b2e4b3d5.setContent(html_7ec418c1b9adb43e3a2f0135335f92e4);
+            
+        
+
+        marker_2c635db588c7a669bc09eb4a22f81da7.bindPopup(popup_8d30648ea4fedfdd9275ec21b2e4b3d5)
+        ;
+
+        
+    
+    
+            marker_2c635db588c7a669bc09eb4a22f81da7.bindTooltip(
+                `<div>
+                     Festa Villani (Rovarè)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_4bd906dab56f4f628d57c78fb9407447.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_a4e0d2a6b6015f6d2af9a7e708408ddf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_f87ad5ba7a4b42edda25ebc32b138474 = L.circle(
+                [45.678133561178804, 12.401392678558162],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a4e0d2a6b6015f6d2af9a7e708408ddf);
+        
+    
+            feature_group_a4e0d2a6b6015f6d2af9a7e708408ddf.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_4667a875dd4301deb5f44b1aec2c6780 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_67728f92c0822fe48982b1a855c24ac5 = L.circle(
+                [45.678133561178804, 12.401392678558162],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_4667a875dd4301deb5f44b1aec2c6780);
+        
+    
+            feature_group_4667a875dd4301deb5f44b1aec2c6780.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_e691601f036f38851db493b1850c708a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_a505b8cc0efb4c09b0b61f22e2b4f72b = L.circle(
+                [45.678133561178804, 12.401392678558162],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e691601f036f38851db493b1850c708a);
+        
+    
+            feature_group_e691601f036f38851db493b1850c708a.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_0bfc7aace85c985c4946830b6800e6fa = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_e4cbd40c8152b957e3ea4885b71e285a = L.marker(
+                [45.65617075144528, 12.094269383482416],
+                {
+}
+            ).addTo(feature_group_0bfc7aace85c985c4946830b6800e6fa);
+        
+    
+            var icon_35953bd7db56dc4f7f873d4cd5944def = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e4cbd40c8152b957e3ea4885b71e285a.setIcon(icon_35953bd7db56dc4f7f873d4cd5944def);
+        
+    
+        var popup_8c846fe29c3bda9f6d9eb1bc5c6939af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d310aaa5af14c9b8d07e05295175cc6 = $(`<div id="html_6d310aaa5af14c9b8d07e05295175cc6" style="width: 100.0%; height: 100.0%;"><b>Festa Martini (Istrana)</b></div>`)[0];
+                popup_8c846fe29c3bda9f6d9eb1bc5c6939af.setContent(html_6d310aaa5af14c9b8d07e05295175cc6);
+            
+        
+
+        marker_e4cbd40c8152b957e3ea4885b71e285a.bindPopup(popup_8c846fe29c3bda9f6d9eb1bc5c6939af)
+        ;
+
+        
+    
+    
+            marker_e4cbd40c8152b957e3ea4885b71e285a.bindTooltip(
+                `<div>
+                     Festa Martini (Istrana)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_0bfc7aace85c985c4946830b6800e6fa.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_6ee78ef49db0d027183c662f7cd54a94 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_1d4f5f955d7130afb2ff395bef3802e3 = L.circle(
+                [45.65617075144528, 12.094269383482416],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_6ee78ef49db0d027183c662f7cd54a94);
+        
+    
+            feature_group_6ee78ef49db0d027183c662f7cd54a94.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_de7c2b85e7459bb9bc5d19db480903a4 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_849feb317afc40f5e34818d35a120b7e = L.circle(
+                [45.65617075144528, 12.094269383482416],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_de7c2b85e7459bb9bc5d19db480903a4);
+        
+    
+            feature_group_de7c2b85e7459bb9bc5d19db480903a4.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_f321d5de3e06240067f028de7b290c55 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_50aaa7b9ce3803449df2d44316022f09 = L.circle(
+                [45.65617075144528, 12.094269383482416],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_f321d5de3e06240067f028de7b290c55);
+        
+    
+            feature_group_f321d5de3e06240067f028de7b290c55.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_1b1fa4ec5b1b585d35676312147b715f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_17aa7e7718b8af4e8289b911feab527a = L.marker(
+                [45.68808383977507, 12.362454539306622],
+                {
+}
+            ).addTo(feature_group_1b1fa4ec5b1b585d35676312147b715f);
+        
+    
+            var icon_e9bf97baf217c8e7299e41cba13d6734 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_17aa7e7718b8af4e8289b911feab527a.setIcon(icon_e9bf97baf217c8e7299e41cba13d6734);
+        
+    
+        var popup_ff882886cb8a149ab798ec307f12b68c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_904ea91a6cdc0b21cb7d9a22ffe6a2aa = $(`<div id="html_904ea91a6cdc0b21cb7d9a22ffe6a2aa" style="width: 100.0%; height: 100.0%;"><b>Festa Morandin</b></div>`)[0];
+                popup_ff882886cb8a149ab798ec307f12b68c.setContent(html_904ea91a6cdc0b21cb7d9a22ffe6a2aa);
+            
+        
+
+        marker_17aa7e7718b8af4e8289b911feab527a.bindPopup(popup_ff882886cb8a149ab798ec307f12b68c)
+        ;
+
+        
+    
+    
+            marker_17aa7e7718b8af4e8289b911feab527a.bindTooltip(
+                `<div>
+                     Festa Morandin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_1b1fa4ec5b1b585d35676312147b715f.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_00664aac7083e30bd7d9a4f55499b25d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_b1d0aa622e1202b8714b1e1ed1778044 = L.circle(
+                [45.68808383977507, 12.362454539306622],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_00664aac7083e30bd7d9a4f55499b25d);
+        
+    
+            feature_group_00664aac7083e30bd7d9a4f55499b25d.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_269d9ba7ada8d613d17d4f7fcea14c5e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_d204914d4bc0895e42517c5aa3185ec5 = L.circle(
+                [45.68808383977507, 12.362454539306622],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_269d9ba7ada8d613d17d4f7fcea14c5e);
+        
+    
+            feature_group_269d9ba7ada8d613d17d4f7fcea14c5e.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_2b3185b83786915a9dbdee3d65fb2217 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_40c78f5351de931801b4d363dfedac58 = L.circle(
+                [45.68808383977507, 12.362454539306622],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2b3185b83786915a9dbdee3d65fb2217);
+        
+    
+            feature_group_2b3185b83786915a9dbdee3d65fb2217.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_22b1adeabb815463a5666b6aa06ea898 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_6ac22c7d37d1a5888995c4628d9ab180 = L.marker(
+                [45.67915872772207, 12.077284342329024],
+                {
+}
+            ).addTo(feature_group_22b1adeabb815463a5666b6aa06ea898);
+        
+    
+            var icon_9ecf87786d5e582c368c585f7a744004 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "magenta",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_6ac22c7d37d1a5888995c4628d9ab180.setIcon(icon_9ecf87786d5e582c368c585f7a744004);
+        
+    
+        var popup_cbd40b82ae2655f34ebf95e4973d5ec0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f1bd768216297af51c207192988bfb6 = $(`<div id="html_7f1bd768216297af51c207192988bfb6" style="width: 100.0%; height: 100.0%;"><b>Perchè no? (Istrana)</b></div>`)[0];
+                popup_cbd40b82ae2655f34ebf95e4973d5ec0.setContent(html_7f1bd768216297af51c207192988bfb6);
+            
+        
+
+        marker_6ac22c7d37d1a5888995c4628d9ab180.bindPopup(popup_cbd40b82ae2655f34ebf95e4973d5ec0)
+        ;
+
+        
+    
+    
+            marker_6ac22c7d37d1a5888995c4628d9ab180.bindTooltip(
+                `<div>
+                     Perchè no? (Istrana)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_22b1adeabb815463a5666b6aa06ea898.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_37adcbf4860011077ef9d84aab78d47f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_e1b2cf39681394154f7bde539bf2e1fd = L.circle(
+                [45.67915872772207, 12.077284342329024],
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_37adcbf4860011077ef9d84aab78d47f);
+        
+    
+            feature_group_37adcbf4860011077ef9d84aab78d47f.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_51cc5b2dc3c92e398518ddd2a7f65514 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_e81575f6a6e9c91905102c31a403339e = L.circle(
+                [45.67915872772207, 12.077284342329024],
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_51cc5b2dc3c92e398518ddd2a7f65514);
+        
+    
+            feature_group_51cc5b2dc3c92e398518ddd2a7f65514.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var feature_group_372a2d79118249bd49045e8ea4a7187a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_50a53d8185b685ecb71cc2a5f35551e9 = L.circle(
+                [45.67915872772207, 12.077284342329024],
+                {"bubblingMouseEvents": true, "color": "magenta", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "magenta", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25000, "stroke": true, "weight": 3}
+            ).addTo(feature_group_372a2d79118249bd49045e8ea4a7187a);
+        
+    
+            feature_group_372a2d79118249bd49045e8ea4a7187a.addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+        
+    
+            var layer_control_2bc631d471a4ee7f0de332a73ad6f314_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f8537bae5249c14a639d98baf6edfd69,
+                },
+                overlays :  {
+                    "Festa Villani (Rovar\u00e8) - Marker" : feature_group_4bd906dab56f4f628d57c78fb9407447,
+                    "Festa Villani (Rovar\u00e8) - Fascia 0-10 km" : feature_group_a4e0d2a6b6015f6d2af9a7e708408ddf,
+                    "Festa Villani (Rovar\u00e8) - Fascia 10-17 km" : feature_group_4667a875dd4301deb5f44b1aec2c6780,
+                    "Festa Villani (Rovar\u00e8) - Fascia 17-25 km" : feature_group_e691601f036f38851db493b1850c708a,
+                    "Festa Martini (Istrana) - Marker" : feature_group_0bfc7aace85c985c4946830b6800e6fa,
+                    "Festa Martini (Istrana) - Fascia 0-10 km" : feature_group_6ee78ef49db0d027183c662f7cd54a94,
+                    "Festa Martini (Istrana) - Fascia 10-17 km" : feature_group_de7c2b85e7459bb9bc5d19db480903a4,
+                    "Festa Martini (Istrana) - Fascia 17-25 km" : feature_group_f321d5de3e06240067f028de7b290c55,
+                    "Festa Morandin - Marker" : feature_group_1b1fa4ec5b1b585d35676312147b715f,
+                    "Festa Morandin - Fascia 0-10 km" : feature_group_00664aac7083e30bd7d9a4f55499b25d,
+                    "Festa Morandin - Fascia 10-17 km" : feature_group_269d9ba7ada8d613d17d4f7fcea14c5e,
+                    "Festa Morandin - Fascia 17-25 km" : feature_group_2b3185b83786915a9dbdee3d65fb2217,
+                    "Perch\u00e8 no? (Istrana) - Marker" : feature_group_22b1adeabb815463a5666b6aa06ea898,
+                    "Perch\u00e8 no? (Istrana) - Fascia 0-10 km" : feature_group_37adcbf4860011077ef9d84aab78d47f,
+                    "Perch\u00e8 no? (Istrana) - Fascia 10-17 km" : feature_group_51cc5b2dc3c92e398518ddd2a7f65514,
+                    "Perch\u00e8 no? (Istrana) - Fascia 17-25 km" : feature_group_372a2d79118249bd49045e8ea4a7187a,
+                },
+            };
+            let layer_control_2bc631d471a4ee7f0de332a73ad6f314 = L.control.layers(
+                layer_control_2bc631d471a4ee7f0de332a73ad6f314_layers.base_layers,
+                layer_control_2bc631d471a4ee7f0de332a73ad6f314_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_bbc81d18f61ab4f95415979b0be123bc);
+
+        
+</script>
+</html>

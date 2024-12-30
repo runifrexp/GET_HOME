@@ -2,11 +2,12 @@ import requests
 import csv
 
 # Configurazioni
-API_KEY = ""  # Inserisci qui la tua chiave API
+API_KEY = "AIzaSyChwz6_vr2JTgTx7KzZtfgPtHDyHSDmJ-k"  # Inserisci qui la tua chiave API
 SPREADSHEET_ID = "143HgVSjT76Y38Lq4ZXSUQmw7ammbo5OT5k8LqYcmK04"  # ID del tuo Google Sheets
 COLUMN_D_RANGE = "'Risposte del modulo 1'!D2:D1000"  # Colonna D (Indirizzi)
 COLUMN_F_RANGE = "'Risposte del modulo 1'!F2:F1000"  # Colonna F (Numero di Persone)
 COLUMN_I_RANGE = "'Risposte del modulo 1'!I2:I1000"  # Colonna I (Nome e Numero di Telefono)
+COLUMN_B_RANGE = "'Risposte del modulo 1'!B2:B1000"  # Colonna B (Autista)
 
 # Funzione per ottenere i dati da una colonna specifica
 def get_google_sheet_data(range_name):
@@ -41,7 +42,7 @@ def save_to_csv(data, filename="dati_ritorno.csv"):
     with open(filename, "w", newline="") as csvfile:
         writer = csv.writer(csvfile)
         # Intestazioni CSV
-        writer.writerow(["Nome", "Cognome", "Numero di Telefono", "Indirizzo", "Numero di Persone", "Latitudine", "Longitudine"])
+        writer.writerow(["Autista", "Nome", "Cognome", "Numero di Telefono", "Indirizzo", "Numero di Persone", "Latitudine", "Longitudine"])
         # Dati
         writer.writerows(data)
     print(f"File CSV '{filename}' aggiornato!")
@@ -52,15 +53,16 @@ def main():
     indirizzi = get_google_sheet_data(COLUMN_D_RANGE)  # Colonna D
     numero_persone = get_google_sheet_data(COLUMN_F_RANGE)  # Colonna F
     nomi_telefoni = get_google_sheet_data(COLUMN_I_RANGE)  # Colonna I
+    autisti = get_google_sheet_data(COLUMN_B_RANGE)  # Colonna B
 
     # Step 2: Allinea i dati (considerando il numero massimo di righe)
     risultati = []
-    max_rows = max(len(indirizzi), len(numero_persone), len(nomi_telefoni))
+    max_rows = max(len(indirizzi), len(numero_persone), len(nomi_telefoni), len(autisti))
     for i in range(max_rows):
         indirizzo = indirizzi[i][0] if i < len(indirizzi) and indirizzi[i] else None
         persone = numero_persone[i][0] if i < len(numero_persone) and numero_persone[i] else None
         nome_telefono = nomi_telefoni[i][0] if i < len(nomi_telefoni) and nomi_telefoni[i] else None
-        print(indirizzo, persone, nome_telefono)
+        autista = autisti[i][0] if i < len(autisti) and autisti[i] else None
 
         if nome_telefono:
             # Dividi Nome, Cognome e Numero di Telefono
@@ -75,7 +77,7 @@ def main():
             nome, cognome, telefono = None, None, None
 
         # Escludi righe con dati mancanti
-        if not (nome and cognome and telefono and indirizzo and persone):
+        if not (autista and nome and cognome and telefono and indirizzo and persone):
             continue
 
         if indirizzo:
@@ -83,7 +85,7 @@ def main():
         else:
             latitudine, longitudine = None, None
 
-        risultati.append([nome, cognome, telefono, indirizzo, persone, latitudine, longitudine])
+        risultati.append([autista, nome, cognome, telefono, indirizzo, persone, latitudine, longitudine])
 
     # Step 3: Salva i risultati nel CSV
     save_to_csv(risultati)
