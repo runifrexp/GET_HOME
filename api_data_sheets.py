@@ -2,7 +2,7 @@ import requests
 import csv
 
 # Configurazioni
-API_KEY = "AIzaSyAwUffePIA3gL_Cz2qadHa6v-RFg9MWIZc"  # Inserisci qui la tua chiave API
+API_KEY = ""  # Inserisci qui la tua chiave API
 SPREADSHEET_ID = "143HgVSjT76Y38Lq4ZXSUQmw7ammbo5OT5k8LqYcmK04"  # ID del tuo Google Sheets
 COLUMN_D_RANGE = "'Risposte del modulo 1'!D2:D1000"  # Colonna D (Indirizzi)
 COLUMN_F_RANGE = "'Risposte del modulo 1'!F2:F1000"  # Colonna F (Numero di Persone)
