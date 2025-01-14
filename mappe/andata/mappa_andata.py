@@ -1,9 +1,7 @@
 import folium
 import pandas as pd
-from colori import get_colore
 
-
-def crea_mappa(csv_file="dati_ritorno.csv", output_file="mappe/ritorno/mappa_ritorno.html"):
+def crea_mappa(csv_file="dati_andata.csv", output_file="mappe/andata/mappa_andata.html"):
     # Leggi il file CSV
     dati = pd.read_csv(csv_file)
 
@@ -18,13 +16,13 @@ def crea_mappa(csv_file="dati_ritorno.csv", output_file="mappe/ritorno/mappa_rit
     colori = {autista: palette_colori[i % len(palette_colori)] for i, autista in enumerate(autisti)}
 
     # Crea la mappa centrata sulla media delle coordinate
-    media_lat = dati['Latitudine_Destinazione'].mean()
-    media_lng = dati['Longitudine_Destinazione'].mean()
+    media_lat = dati['Latitudine'].mean()
+    media_lng = dati['Longitudine'].mean()
     mappa = folium.Map(location=[media_lat, media_lng], zoom_start=10)
 
     # Aggiungi i punti alla mappa
     for _, row in dati.iterrows():
-        if pd.notna(row['Latitudine_Destinazione']) and pd.notna(row['Longitudine_Destinazione']):
+        if pd.notna(row['Latitudine']) and pd.notna(row['Longitudine']):
             popup_info = (
                 f"<b>Nome:</b> {row['Nome']} {row['Cognome']}<br>"
                 f"<b>Telefono:</b> {row['Numero di Telefono']}<br>"
@@ -33,7 +31,7 @@ def crea_mappa(csv_file="dati_ritorno.csv", output_file="mappe/ritorno/mappa_rit
                 f"<b>Autista:</b> {row['Autista']}"
             )
             folium.CircleMarker(
-                location=[row['Latitudine_Destinazione'], row['Longitudine_Destinazione']],
+                location=[row['Latitudine'], row['Longitudine']],
                 radius=10,  # Dimensione del marker
                 color=colori[row['Autista']],  # Colore del bordo
                 fill=True,

@@ -79,7 +79,7 @@ def add_legend(map_object, autisti_color_map, feste_color_map):
 
 
 # Funzione per creare la mappa
-def crea_mappa(csv_file="dati_ritorno.csv", output_file="mappe/ritorno/mappa_combinata_ritorno.html"):
+def crea_mappa(csv_file="dati_andata.csv", output_file="mappe/andata/mappa_combinata_andata.html"):
     """
     Combina le destinazioni di ritorno e le feste su una mappa.
     :param csv_file: Nome del file CSV con i dati dei clienti
@@ -108,7 +108,7 @@ def crea_mappa(csv_file="dati_ritorno.csv", output_file="mappe/ritorno/mappa_com
 
     # Aggiungi i clienti alla mappa
     for _, row in dati_clienti.iterrows():
-        if pd.notna(row['Latitudine_Destinazione']) and pd.notna(row['Longitudine_Destinazione']):
+        if pd.notna(row['Latitudine']) and pd.notna(row['Longitudine']):
             popup_info = (
                 f"<b>Nome:</b> {row['Nome']} {row['Cognome']}<br>"
                 f"<b>Telefono:</b> {row['Numero di Telefono']}<br>"
@@ -117,7 +117,7 @@ def crea_mappa(csv_file="dati_ritorno.csv", output_file="mappe/ritorno/mappa_com
                 f"<b>Autista:</b> {row['Autista']}"
             )
             folium.CircleMarker(
-                location=[row['Latitudine_Destinazione'], row['Longitudine_Destinazione']],
+                location=[row['Latitudine'], row['Longitudine']],
                 radius=8,
                 color=colori_clienti[row['Autista']],
                 fill=True,
